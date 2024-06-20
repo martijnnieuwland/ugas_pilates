@@ -1,0 +1,11 @@
+{
+  "name": "ugas_pilates",
+  "version": "1.0.0",
+  "scripts": {
+    "build-css": "sass ugas_pilates/static/ugas_pilates/sass/custom.scss ugas_pilates/static/ugas_pilates/css/custom.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.0",
+    "sass": "^1.32.0"
+  }
+}
