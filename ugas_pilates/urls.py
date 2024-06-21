@@ -24,4 +24,12 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('ugas/', views.ugas, name='ugas'),
+    path('instructors/', views.instructors, name='instructors'),
+    path('testimonials/', views.testimonials, name='testimonials'),
+    path('faq/', views.faq, name='faq'),
+    path('blog/', views.blog, name='blog'),
+    path('schedule/', views.schedule, name='schedule'),
+    path('pricing/', views.pricing, name='pricing'),
+    path('contact/', views.contact, name='contact'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

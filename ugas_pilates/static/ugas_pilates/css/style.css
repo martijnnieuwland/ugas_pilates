@@ -69,7 +69,21 @@ footer {
   color: #fff;
   background-color: #06491d;
   font-size: 0.8em;
-  position: relative;
+  position: fixed bottom;
   z-index: 2;
   /* Ensure footer stays above the carousel */
+}
+
+a {
+  color: #52b58f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #dabf95;
+  text-decoration: none;
+}
+
+a::after {
+  color: #350c09;
 }

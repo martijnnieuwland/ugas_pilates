@@ -1,0 +1,131 @@
+{% extends 'ugas_pilates/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- LANDING PAGE Content Start -->
+<div id="main" class="main-content">
+  <div class="landing">
+    <h1>True Pilates</h1>
+    <h3>Getting to Your Core</h3>
+    <a href="#" class="btn btn-lg btn-outline-light mt-3" role="button" data-bs-toggle="button">Boook a session</a>
+  </div>
+</div>
+
+<!-- ABOUT Content Start -->
+<div id="about" class="padding main-content pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="{% static 'ugas_pilates/images/pilates-pictures6.jpg' %}" alt="pilates-pictures4">
+      </div>
+      <div class="col-sm-6">
+        <h2 class="">True Pilates: Getting to Your Core</h2>
+        <p class="lead">Experience the transformative power of authentic Pilates. Strengthen your core, improve
+          flexibility, and enhance your overall well-being with our expert-led classes.</p>
+        <p class="">At Uga's pilates we like to focus on the customer and bla di bla di bla.</p>
+        <p class="">Ugana was trained by master pilates instructor <a href="https://www.true-pilates.be"
+            target="_blank">Anna
+            Rubau</a>.</p>
+        <p class="">See what our customers think of us.</p>
+        <p class="">Read the FAQ.</p>
+        <p class="">Follow our blog.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ABOUT Content End -->
+
+<!-- DETAILS Content Start -->
+<div id="about" class="padding main-content pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4>Instructors</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi tempora voluptatibus accusamus?
+          Recusandae iste explicabo, numquam veritatis mollitia eveniet natus autem facilis, saepe doloremque animi
+          impedit perspiciatis quas minima temporibus?</p>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4>Testimonials</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi tempora voluptatibus accusamus?
+          Recusandae iste explicabo, numquam veritatis mollitia eveniet natus autem facilis, saepe doloremque animi
+          impedit perspiciatis quas minima temporibus?</p>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4>FAQ</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi tempora voluptatibus accusamus?
+          Recusandae iste explicabo, numquam veritatis mollitia eveniet natus autem facilis, saepe doloremque animi
+          impedit perspiciatis quas minima temporibus?</p>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4>Blog</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi tempora voluptatibus accusamus?
+          Recusandae iste explicabo, numquam veritatis mollitia eveniet natus autem facilis, saepe doloremque animi
+          impedit perspiciatis quas minima temporibus?</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- DETAILS Content End -->
+
+<!-- Classes Content Start -->
+<div id="about" class="padding main-content pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Classes</h2>
+        <p>We offer a range of classes from first time introductory classes to advanced teacher training.
+          In our studio we have a wide range of equipment such as the reformer, the wall unit, wunda chair and most
+          importantly the good old multi-purpose mat.
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <h2 class="">Pricing</h2>
+        <p>See our <a href="">price list</a> for detailed pricing about the various services we offer.
+          We have various offers for you to maximize the value of your classes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Classes Content End -->
+
+<!-- IMAGES Content Start -->
+<div id="fixed" class="position-sticky bottom-0"> <!--fixed-bottom-->
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="{% static 'ugas_pilates/images/pilates-pictures.jpg' %}" class="d-block w-100" alt="Slide0">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static 'ugas_pilates/images/pilates-pictures4.jpg' %}" class="d-block w-100" alt="Slide1">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'ugas_pilates/images/pilates-pictures5.jpg' %}" class="d-block w-100" alt="Slide2">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'ugas_pilates/images/pilates-pictures6.jpg' %}" class="d-block w-100" alt="Slide3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- IMAGES Content End -->
+  {% endblock content %}
