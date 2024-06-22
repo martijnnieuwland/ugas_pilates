@@ -7,7 +7,8 @@
   <div class="landing">
     <h1>True Pilates</h1>
     <h3>Getting to Your Core</h3>
-    <a href="#" class="btn btn-lg btn-outline-light mt-3" role="button" data-bs-toggle="button">Boook a session</a>
+    <a href="{% url 'schedule' %}" class="btn btn-lg btn-outline-light mt-3" role="button">
+      Book a session</a>
   </div>
 </div>
 
@@ -16,7 +17,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
-        <img src="{% static 'ugas_pilates/images/pilates-pictures6.jpg' %}" alt="pilates-pictures4">
+        <img class="" src="{% static 'ugas_pilates/images/pilates-pictures6.jpg' %}" alt="pilates-pictures4">
       </div>
       <div class="col-sm-6">
         <h2 class="">True Pilates: Getting to Your Core</h2>
@@ -81,7 +82,8 @@
       </div>
       <div class="col-sm-6">
         <h2 class="">Pricing</h2>
-        <p>See our <a href="">price list</a> for detailed pricing about the various services we offer.
+        <p>See our <a href="{% url 'pricing' %}">price list</a> for detailed pricing about the various services we
+          offer.
           We have various offers for you to maximize the value of your classes.</p>
       </div>
     </div>
@@ -90,8 +92,8 @@
 <!-- Classes Content End -->
 
 <!-- IMAGES Content Start -->
-<div id="fixed" class="position-sticky bottom-0"> <!--fixed-bottom-->
-  <div id="carouselExampleIndicators" class="carousel slide">
+<div id="fixed"> <!--fixed-bottom-->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
         aria-current="true" aria-label="Slide 1"></button>
