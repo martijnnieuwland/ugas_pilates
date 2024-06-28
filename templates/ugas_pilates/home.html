@@ -3,17 +3,17 @@
 
 {% block content %}
 <!-- LANDING PAGE Content Start -->
-<div id="main" class="main-content">
+<div id="landing" class="main-content">
   <div class="landing">
     <h1>True Pilates</h1>
     <h3>Getting to Your Core</h3>
-    <a href="{% url 'schedule' %}" class="btn btn-lg btn-outline-light mt-3" role="button">
+    <a href="{% url 'schedule' %}" class="btn btn-lg btn-outline-dark mt-3" role="button">
       Book a session</a>
   </div>
 </div>
 
 <!-- ABOUT Content Start -->
-<div id="about" class="padding main-content pt-5 pb-5">
+<div id="intro" class="padding main-content pt-5 pb-5">
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
@@ -37,7 +37,7 @@
 <!-- ABOUT Content End -->
 
 <!-- DETAILS Content Start -->
-<div id="about" class="padding main-content pt-5 pb-5">
+<div id="info" class="padding main-content pt-5 pb-5">
   <div class="container">
     <div class="row">
       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -70,7 +70,7 @@
 <!-- DETAILS Content End -->
 
 <!-- Classes Content Start -->
-<div id="about" class="padding main-content pt-5 pb-5">
+<div id="classes" class="padding main-content pt-5 pb-5">
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
@@ -92,7 +92,7 @@
 <!-- Classes Content End -->
 
 <!-- IMAGES Content Start -->
-<div id="fixed"> <!--fixed-bottom-->
+<div id="carousel"> <!--fixed-bottom-->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"

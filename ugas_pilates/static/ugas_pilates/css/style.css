@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
-  background-color: #fff;
+  background-color: #06491d;
 }
 
 /* navbar styling */
@@ -17,7 +17,7 @@ body {
 }
 
 /* background styling */
-#main {
+#landing {
   background: url('../images/pilates-pictures.jpg') no-repeat center center fixed;
   background-size: cover; /* This ensures the image covers the entire area */
   height: 100vh; /* This sets the height to 100% of the viewport height */
@@ -43,21 +43,44 @@ body {
 }
 
 /* keep the image inside the containers */
-.padding img {
+#intro img {
+  width: 100%;
+}
+#ugas img {
   width: 100%;
 }
 
-#about {
+#intro {
+  background-color: #dabf95;
+  width: 100%;
+}
+
+#info {
+  background-color: #fff;
+  width: 100%;
+}
+
+#classes {
+  background-color: #52b58f;
+  width: 100%;
+}
+
+#ugas {
   background-color: #fff;
   width: 100%;
 }
 
 /* fixed scrolling image effect */
-#fixed {
+#carousel {
   width: 100%;
   height: 60%;
   z-index: 1;
   /* Lower z-index to stay behind main content */
+}
+
+#ugas {
+  background-color: #fff;
+  width: 100%;
 }
 
 .carousel-inner img {
@@ -86,6 +109,6 @@ a:hover {
   text-decoration: none;
 }
 
-a::after {
+a:after {
   color: #350c09;
 }
