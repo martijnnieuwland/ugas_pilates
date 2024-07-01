@@ -1,3 +1,8 @@
+# Project files to ignore
+ugas_pilates/static/ugas_pilates/images
+
+
+# BASIC FILES TO IGNORE
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

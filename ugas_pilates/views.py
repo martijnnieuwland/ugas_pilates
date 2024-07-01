@@ -15,6 +15,9 @@ def faq(request):
 def home(request):
     return render(request, 'ugas_pilates/home.html')
 
+def index(request):
+    return render(request, 'ugas_pilates/index.html')
+
 def instructors(request):
     return render(request, 'ugas_pilates/instructors.html')
 
