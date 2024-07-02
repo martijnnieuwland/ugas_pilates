@@ -19,9 +19,11 @@
 
 <body>
   {% block nav %}
-  <nav class="navbar navbar-expand-sm navbar-light fixed-top navbar-custom">
+  <nav class="navbar navbar-light pb-4 navbar-expand-md fixed-top navbar-custom" data-bs-theme="light">
     <div class="container-xxl">
       <a href="{% url 'index' %}" class="navbar-brand">
+        <img src="{% static 'ugas_pilates/images/logo.svg' %}" alt="Logo" height="30"
+          class="d-inline-block align-text-top">
         <span class="fw-bold text-secondary">
           Uga's Pilates
         </span>
@@ -36,13 +38,13 @@
       <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
         <ul class="navbar-nav fw-light">
           <li class="nav-item">
-            <a class="nav-link active" href="{% url 'index' %}">Home</a>
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#studio" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">About</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url 'ugas' %}">Uga's pilates</a></li>
+              <li><a class="dropdown-item" href="{% url 'studio' %}">Uga's pilates</a></li>
               <li><a class="dropdown-item" href="{% url 'instructors' %}">Instructors</a></li>
               <li><a class="dropdown-item" href="{% url 'testimonials' %}">Testimonials</a></li>
               <li>
@@ -78,33 +80,82 @@
 
   {% block footer %}
   <!-- FOOTER Content Start -->
-  <footer class="container-fluid text-center main-content">
-    <div class="row">
-      <address class="col-sm-4">
-        <h4>Contact info</h4>
-        <br>Address: Augustijnslei 295, 2930 Brasschaat, Belgium
-        <br>E-mail: <a href="mailto: ugana82@yahoo.de">ugana@ugaspilates.com</a>
-      </address>
-      <address class="col-sm-4">
-        <h4>Company details</h4>
-        <br>Tax ID:
-        <br>VAT No:
-      </address>
-      <address class="col-sm-4">
-        <h4>Other Stuff</h4>
-        <br>A logo
-        <br>Or something
-      </address>
+  <footer class="footer bg-light p-4">
+    <div class="container">
+      <div class="row gx-5">
+        <!-- Company Info -->
+        <div class="col-md-3 p-2">
+          <img src="{% static 'ugas_pilates/images/logo-green-grey.svg' %}" alt="Company Logo"
+            class="footer-logo img-fluid">
+          <p>About Uga's Pilates and what we do.</p>
+          <address>
+            <br>Augustijnslei 295, 2930 Brasschaat, Belgium
+            <br>E-mail: <a href="mailto: ugana82@yahoo.de">ugana@uganaspilates.com</a>
+            <br>Phone: +32 470 128513
+          </address>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-md-3 p-2">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'studio' %}">About Us</a></li>
+            <li><a href="{% url 'pricing' %}">Services</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Useful Resources -->
+        <div class="col-md-3 p-2">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="{% url 'faq' %}">FAQs</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'contact' %}">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="col-md-3 p-2">
+          <h5>Stay Updated</h5>
+          <div class="input-group mb-3 input-group-sm">
+            <input type="text" class="form-control" placeholder="Your email address" aria-label="Recipient's username"
+              aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+          </div>
+          <p>We respect your privacy. No spam ever!</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row text-end">
+        <div class="col-md-12 p-2">
+          <div class="footer-bottom">
+            <p>&copy; 2024 Cloudsurfer. All rights reserved.</p>
+            <ul class="footer-bottom-links">
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/terms-of-service">Terms of Service</a></li>
+              <li><a href="/sitemap">Sitemap</a></li>
+            </ul>
+            <div class="social-media">
+              <a href="https://facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a>
+              <a href="https://twitter.com"><i class="fab fa-twitter"></i>Twitter</a>
+              <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+              <a href="https://instagram.com"><i class="fab fa-instagram"></i>Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
   <!-- FOOTER Content End -->
+  {% endblock footer %}
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="{% static 'ugas_pilates/javascript/javascript.js' %}"></script>
-  {% endblock footer %}
 
 </body>
 

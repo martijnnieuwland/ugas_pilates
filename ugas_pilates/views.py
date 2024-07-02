@@ -30,5 +30,5 @@ def schedule(request):
 def testimonials(request):
     return render(request, 'ugas_pilates/testimonials.html')
 
-def ugas(request):
-    return render(request, 'ugas_pilates/ugas.html')
+def studio(request):
+    return render(request, 'ugas_pilates/studio.html')
