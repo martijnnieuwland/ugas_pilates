@@ -69,14 +69,14 @@
   </nav>
   {% endblock nav %}
 
-
   {% block landing %}
   {% endblock landing %}
 
   {% block studio %}
   {% endblock studio %}
 
-  {% block content %}{% endblock content %}
+  {% block content %}
+  {% endblock content %}
 
   {% block footer %}
   <!-- FOOTER Content Start -->
@@ -133,7 +133,7 @@
           <div class="footer-bottom">
             <p>&copy; 2024 Cloudsurfer. All rights reserved.</p>
             <ul class="footer-bottom-links">
-              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
               <li><a href="/terms-of-service">Terms of Service</a></li>
               <li><a href="/sitemap">Sitemap</a></li>
             </ul>

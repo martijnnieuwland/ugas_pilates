@@ -24,11 +24,14 @@ def instructors(request):
 def pricing(request):
     return render(request, 'ugas_pilates/pricing.html')
 
+def privacy(request):
+    return render(request, 'ugas_pilates/privacy-policy.html')
+
 def schedule(request):
     return render(request, 'ugas_pilates/schedule.html')
 
-def testimonials(request):
-    return render(request, 'ugas_pilates/testimonials.html')
-
 def studio(request):
     return render(request, 'ugas_pilates/studio.html')
+
+def testimonials(request):
+    return render(request, 'ugas_pilates/testimonials.html')
