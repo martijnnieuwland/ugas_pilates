@@ -1,114 +1,54 @@
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  color: #000;
-  background-color: #06491d;
+/* Body */
+section {
+  padding: 0 0 60px 0;
 }
 
-/* navbar styling */
-.navbar,
-.navbar-brand {
-  font-size: 1.1em;
-  font-weight: 600;
-  background-color: #06491d;
+/* Navbar */
+.navbar-custom {
+  transition: background-color 0.5s, color 0.5s, padding 0.5s;
+  padding: 10px 20px;
 }
 
-/* background styling */
-#landing {
-  background: url('../images/pilates-pictures.jpg') no-repeat center center fixed;
-  background-size: cover; /* This ensures the image covers the entire area */
-  height: 100vh; /* This sets the height to 100% of the viewport height */
-  width: 100%;
+.navbar-custom .nav-link {
+  color: white;
+  /* Default text color */
+  transition: color 0.5s;
+}
+
+.navbar-custom.scrolled {
+  background-color: white;
+  /* Change to desired color */
+  padding: 10px 20px;
+}
+
+.navbar-custom.scrolled .nav-link {
+  color: black;
+  /* Text color when scrolled */
+}
+
+/* Landing */
+.bg-image {
+  background-image: url("../images/pilates-pictures.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   position: relative;
-  color: #350c09;
-  display: flex; /* Using flexbox to center content if needed */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-}
-
-.main-content {
-  position: relative;
-  /* Ensure main content stays above the carousel */
-  z-index: 3;
-}
-
-/* main content styling */
-.landing {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-
-/* keep the image inside the containers */
-#intro img {
-  width: 100%;
-}
-#ugas img {
-  width: 100%;
-}
-
-#intro {
-  background-color: #dabf95;
-  width: 100%;
-}
-
-#info {
-  background-color: #fff;
-  width: 100%;
-}
-
-#classes {
-  background-color: #52b58f;
-  width: 100%;
-}
-
-#ugas {
-  background-color: #fff;
-  width: 100%;
-}
-
-/* fixed scrolling image effect */
-#carousel {
-  width: 100%;
-  height: 60%;
-  z-index: 1;
-  /* Lower z-index to stay behind main content */
-}
-
-#ugas {
-  background-color: #fff;
-  width: 100%;
-}
-
-.carousel-inner img {
-  height: 100%;
-  object-fit: cover;
-}
-
-/* footer styling */
-footer {
-  padding: 5% 5%;
   color: #fff;
-  background-color: #06491d;
-  font-size: 0.8em;
-  position: fixed bottom;
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Optional: Add a dark overlay for better text readability */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: relative;
   z-index: 2;
-  /* Ensure footer stays above the carousel */
-}
-
-a {
-  color: #52b58f;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #dabf95;
-  text-decoration: none;
-}
-
-a:after {
-  color: #350c09;
+  /* Ensure text is above the overlay */
+  /* color: #dabf95; */
 }
