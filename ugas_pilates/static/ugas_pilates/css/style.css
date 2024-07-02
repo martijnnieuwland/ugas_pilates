@@ -10,7 +10,7 @@ section {
 }
 
 .navbar-custom .nav-link {
-  color: white;
+  /* color: white; */
   /* Default text color */
   transition: color 0.5s;
 }
@@ -22,7 +22,7 @@ section {
 }
 
 .navbar-custom.scrolled .nav-link {
-  color: black;
+  /* color: black; */
   /* Text color when scrolled */
 }
 
