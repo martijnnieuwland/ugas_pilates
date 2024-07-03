@@ -34,4 +34,5 @@ urlpatterns = [
     path('pricing/', views.pricing, name='pricing'),
     path('contact/', views.contact, name='contact'),
     path('privacy-policy/', views.privacy, name='privacy'),
+    path('terms-of-service/', views.terms, name='terms'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
