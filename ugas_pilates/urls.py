@@ -15,16 +15,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from . import views
+from .sitemaps import StaticViewsSitemap
 
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import path
+
+
+sitemaps = {"static": StaticViewsSitemap,}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('', views.home, name='home'),
     path('', views.home, name='home'),
-    path('index/', views.index, name='index'),
     path('studio/', views.studio, name='studio'),
     path('instructors/', views.instructors, name='instructors'),
     path('testimonials/', views.testimonials, name='testimonials'),
@@ -35,4 +40,6 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('privacy-policy/', views.privacy, name='privacy'),
     path('terms-of-service/', views.terms, name='terms'),
+    path('sitemap.xml', sitemap, {"sitemaps": sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

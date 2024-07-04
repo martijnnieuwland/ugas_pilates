@@ -12,10 +12,10 @@ def contact(request):
 def faq(request):
     return render(request, 'ugas_pilates/faq.html')
 
-def home(request):
-    return render(request, 'ugas_pilates/home.html')
+# def home(request):
+#     return render(request, 'ugas_pilates/home.html')
 
-def index(request):
+def home(request):
     return render(request, 'ugas_pilates/index.html')
 
 def instructors(request):

@@ -21,7 +21,7 @@
   {% block nav %}
   <nav class="navbar navbar-light pb-4 navbar-expand-md fixed-top navbar-custom" data-bs-theme="light">
     <div class="container-xxl">
-      <a href="{% url 'index' %}" class="navbar-brand">
+      <a href="{% url 'home' %}" class="navbar-brand">
         <img src="{% static 'ugas_pilates/images/logo.svg' %}" alt="Logo" height="30"
           class="d-inline-block align-text-top">
         <span class="fw-bold text-secondary">
@@ -38,7 +38,7 @@
       <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
         <ul class="navbar-nav fw-light">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">Home</a>
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#studio" role="button" data-bs-toggle="dropdown"
@@ -99,7 +99,7 @@
         <div class="col-md-3 p-2">
           <h5>Quick Links</h5>
           <ul>
-            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'studio' %}">About Us</a></li>
             <li><a href="{% url 'pricing' %}">Services</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
@@ -135,7 +135,7 @@
             <ul class="footer-bottom-links">
               <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
               <li><a href="{% url 'terms' %}">Terms of Service</a></li>
-              <li><a href="/sitemap">Sitemap</a></li>
+              <li><a href="/sitemap.xml">Sitemap</a></li>
             </ul>
             <div class="social-media">
               <a href="https://facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a>
