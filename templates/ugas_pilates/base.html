@@ -82,17 +82,12 @@
   <!-- FOOTER Content Start -->
   <footer class="footer bg-light p-4">
     <div class="container">
-      <div class="row gx-5">
+      <div class="row gx-5 text-center">
         <!-- Company Info -->
         <div class="col-md-3 p-2">
           <img src="{% static 'ugas_pilates/images/logo-green-grey.svg' %}" alt="Company Logo"
             class="footer-logo img-fluid">
-          <p>About Uga's Pilates and what we do.</p>
-          <address>
-            <br>Augustijnslei 295, 2930 Brasschaat, Belgium
-            <br>E-mail: <a href="mailto: ugana82@yahoo.de">ugana@uganaspilates.com</a>
-            <br>Phone: +32 470 128513
-          </address>
+          <p><em>True pilates. True to the core.</em></p>
         </div>
 
         <!-- Navigation Links -->
@@ -124,26 +119,31 @@
               aria-describedby="button-addon2">
             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
           </div>
-          <p>We respect your privacy. No spam ever!</p>
+          <p>We respect your privacy. No spam <em>ever!</em></p>
         </div>
       </div>
       <hr>
-      <div class="row text-end">
-        <div class="col-md-12 p-2">
-          <div class="footer-bottom">
-            <p>&copy; 2024 Cloudsurfer. All rights reserved.</p>
-            <ul class="footer-bottom-links">
-              <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
-              <li><a href="{% url 'terms' %}">Terms of Service</a></li>
-              <li><a href="/sitemap.xml">Sitemap</a></li>
-            </ul>
-            <div class="social-media">
-              <a href="https://facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a>
-              <a href="https://twitter.com"><i class="fab fa-twitter"></i>Twitter</a>
-              <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
-              <a href="https://instagram.com"><i class="fab fa-instagram"></i>Instagram</a>
-            </div>
+      <div class="row footer-bottom p2">
+        <div class="col-md-6">
+          <address>
+            <br>Augustijnslei 295, 2930 Brasschaat, Belgium
+            <br>E-mail: <a href="mailto: ugana82@yahoo.de">ugana@uganaspilates.com</a>
+            <br>Phone: +32 470 128513
+          </address>
+        </div>
+        <div class="col-md-6 text-end">
+          <ul class="footer-bottom-links">
+            <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+            <li><a href="{% url 'terms' %}">Terms of Service</a></li>
+            <li><a href="sitemap.xml">Sitemap</a></li>
+          </ul>
+          <div class="social-media">
+            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i>Twitter</a>
+            <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+            <a href="https://instagram.com"><i class="fab fa-instagram"></i>Instagram</a>
           </div>
+          <p>&copy; 2024 Cloudsurfer. All rights reserved.</p>
         </div>
       </div>
     </div>

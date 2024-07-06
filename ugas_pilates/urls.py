@@ -28,7 +28,6 @@ sitemaps = {"static": StaticViewsSitemap,}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', views.home, name='home'),
     path('', views.home, name='home'),
     path('studio/', views.studio, name='studio'),
     path('instructors/', views.instructors, name='instructors'),
