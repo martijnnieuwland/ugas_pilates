@@ -17,7 +17,8 @@ ul {
 .navbar-custom {
   transition: background-color 0.3s,
     color 0.5s,
-    padding 0.5s;
+    padding 0.5s,
+    box-shadow 0.5s;
   padding: 10px 20px;
 }
 
@@ -30,6 +31,7 @@ ul {
 .navbar-custom.scrolled {
   background-color: var(--bs-light-bg-subtle);
   padding: 10px 20px;
+  box-shadow: 0px 9px 10px rgba(0, 0, 0, .1);
 }
 
 .navbar-custom.scrolled .nav-link {
@@ -62,4 +64,13 @@ ul {
   z-index: 2;
   /* Ensure text is above the overlay */
   /* color: #dabf95; */
+}
+
+/* Google fonts */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Buda", cursive;
+}
+
+.navbar-brand {
+  font-family: "Buda";
 }

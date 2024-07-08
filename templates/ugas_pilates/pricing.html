@@ -1,22 +1,78 @@
-{% extends 'ugas_pilates/base.html' %}
-{% load static %}
+{% extends 'ugas_pilates/base.html' %} {% load static %} {% block content %}
+<div id="pricing" class="padding main-content py-5 px-sm-5 mx-md-5 m-5">
+  <h2 class="text-center mt-5 display-2">Your Value</h2>
 
-{% block content %}
-<div id="pricing" class="padding main-content p-5 m-5">
-    <h1 class="text-center p5">Pricing page</h1>
-    <div class="container mt-5">
-      <ul class="list-group mb-5">
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-        <li class="list-group-item">This is the price for your class $1.000,00</li>
-      </ul>
+  <div class="container">
+    <div class="row">
+      <div id="solo" class="col col-12 col-lg-6">
+        <h6 class="display-6">Solo Sessions</h6>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>1 Session</td>
+              <td>€ 20</td>
+            </tr>
+            <tr>
+              <td>10 Sessions</td>
+              <td>€ 180</td>
+            </tr>
+            <tr>
+              <td>25 Sessions</td>
+              <td>€ 400</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="private" class="col col-12 col-lg-6">
+        <h6 class="display-6">Personal Training</h6>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>1 Personal Session</td>
+              <td>€ 70</td>
+            </tr>
+            <tr>
+              <td>1 Duo Session</td>
+              <td>€ 45 p.p.</td>
+            </tr>
+            <tr>
+              <td>10 Sessions</td>
+              <td>€ 630</td>
+            </tr>
+            <tr>
+              <td>25 Sessions</td>
+              <td>€ 1400</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="class" class="col col-12 col-lg-6">
+        <h6 class="display-6">Group Class</h6>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>1 Mat Class</td>
+              <td>€ 20</td>
+            </tr>
+            <tr>
+              <td>10 Classes</td>
+              <td>€ 180</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="offers" class="col col-12 col-lg-6">
+        <h6 class="display-6">Offers</h6>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Membership</td>
+              <td>€ 400 / Month</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+  </div>
 </div>
 {% endblock content %}
