@@ -1,119 +1,206 @@
-{% extends 'ugas_pilates/base.html' %}
-{% load static %}
+{% extends 'ugas_pilates/base.html' %} {% load static %} {% block content %}
+<div id="testimonials" class="text-center padding main-content py-5 my-5">
+  <h2 class="mt-5 px-5 display-2">
+    Hear it From Our
+    <strong>Hard Core!</strong>
+  </h2>
 
-{% block content %}
-  <div id="testimonials" class="text-center padding main-content py-5 my-5">
-    <h2 class="mt-5 px-5 display-2">Hear it From Our <strong>Hard Core!</strong></h2>
-
-    <div class="mt-5">
-      <section class="text-center vh-100" id="quotes">
-        <h6 class="display-6 pb-3">Quotes from our customers</h6>
-        <div class="h-75 w-75 d-inline-block overflow-auto">
-          <div class="quote px-3 pb-1">
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <p class="lead">"Awesome all over!"</p>
-            <p class="">
-              "<em>Ugana is the best instructor ever! And the studio is the most tranquil place in the vicinity of Antwerp."</em>
-            </p>
-            <p class="">
-              <strong>Martijn Nieuwland</strong>
-              <br /><small>Pilates enthusiast</small>
-            </p>
-            <hr />
-          </div>
-          <div class="quote px-3 pb-1">
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <p class="lead">"This is just an awesome place to come do pilates!"</p>
-            <p class="">
-              <em>"No better place to do pilates. I did the preperation for my teacher training here."</em>
-            </p>
-            <p class="">
-              <strong>Anu Nieuwland</strong>
-              <br /><small>Future pilates instructor</small>
-            </p>
-            <hr />
-          </div>
-          <div class="quote px-3">
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <p class="lead">"Quote title!!!"</p>
-            <p class="">
-              <em>"This is the main text of the quote."</em>
-            </p>
-            <p class="">
-              <strong>FirstName LastName</strong>
-              <br /><small>Relation to Uga's pilates</small>
-            </p>
-            <hr />
-          </div>
-          <div class="quote px-3">
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <img src="{% static 'ugas_pilates/icons/star-fill.svg' %}" alt="Review score" />
-            <p class="lead">"Quote title!!!"</p>
-            <p class="">
-              <em>"This is the main text of the quote."</em>
-            </p>
-            <p class="">
-              <strong>FirstName LastName</strong>
-              <br /><small>Relation to Uga's pilates</small>
-            </p>
-          </div>
+  <div class="mt-5">
+    <section class="text-center vh-100" id="quotes">
+      <h6 class="display-6 pb-3">Quotes from our customers</h6>
+      <div class="h-75 w-75 d-inline-block overflow-auto">
+        <div class="quote px-3 pb-1">
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <p class="lead">"Awesome all over!"</p>
+          <p class="">
+            "
+            <em>
+              Ugana is the best instructor ever! And the studio is the most
+              tranquil place in the vicinity of Antwerp."
+            </em>
+          </p>
+          <p class="">
+            <strong>Martijn Nieuwland</strong>
+            <br />
+            <small>Pilates enthusiast</small>
+          </p>
+          <hr />
         </div>
-        <div>
-          <img src="{% static 'ugas_pilates/images/logo-green-grey.svg' %}" alt="Logo" />
+        <div class="quote px-3 pb-1">
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <p class="lead">
+            "This is just an awesome place to come do pilates!"
+          </p>
+          <p class="">
+            <em>
+              "No better place to do pilates. I did the preperation for my
+              teacher training here."
+            </em>
+          </p>
+          <p class="">
+            <strong>Anu Nieuwland</strong>
+            <br />
+            <small>Future pilates instructor</small>
+          </p>
+          <hr />
         </div>
-      </section>
+        <div class="quote px-3">
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <p class="lead">"Quote title!!!"</p>
+          <p class="">
+            <em>"This is the main text of the quote."</em>
+          </p>
+          <p class="">
+            <strong>FirstName LastName</strong>
+            <br />
+            <small>Relation to Uga's pilates</small>
+          </p>
+          <hr />
+        </div>
+        <div class="quote px-3">
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <img
+            src="{% static 'ugas_pilates/icons/star-fill.svg' %}"
+            alt="Review score"
+          />
+          <p class="lead">"Quote title!!!"</p>
+          <p class="">
+            <em>"This is the main text of the quote."</em>
+          </p>
+          <p class="">
+            <strong>FirstName LastName</strong>
+            <br />
+            <small>Relation to Uga's pilates</small>
+          </p>
+        </div>
+      </div>
+      <div>
+        <img
+          src="{% static 'ugas_pilates/images/logo-green-grey.svg' %}"
+          alt="Logo"
+        />
+      </div>
+    </section>
 
-      <section class="" id="videos">
-        <h6 class="display-6">See our students in action</h6>
-        <video src="{% static 'ugas_pilates/media/testvideo.mp4' %}" class="object-fit-contain img-fluid" autoplay controls></video>
-      </section>
+    <section class="" id="videos">
+      <h6 class="display-6">See our students in action</h6>
+      <video
+        src="{% static 'ugas_pilates/media/testvideo.mp4' %}"
+        class="object-fit-contain img-fluid"
+        autoplay
+        controls
+      ></video>
+    </section>
 
-      {% comment %} <section class="bg-light" id="audios">
-        <h6 class="display-6">This section will contain audio testimonials.</h6>
-      </section>
+    {% comment %}
+    <section class="bg-light" id="audios">
+      <h6 class="display-6">This section will contain audio testimonials.</h6>
+    </section>
 
-      <section class="" id="cases">
-        <h6 class="display-6">This section will contain case testimonials.</h6>
-      </section>
+    <section class="" id="cases">
+      <h6 class="display-6">This section will contain case testimonials.</h6>
+    </section>
 
-      <section class="bg-light" id="socials">
-        <h6 class="display-6">This section will contain social testimonials.</h6>
-      </section>
+    <section class="bg-light" id="socials">
+      <h6 class="display-6">This section will contain social testimonials.</h6>
+    </section>
 
-      <section class="" id="interviews">
-        <h6 class="display-6">This section will contain interview testimonials.</h6>
-      </section>
+    <section class="" id="interviews">
+      <h6 class="display-6">
+        This section will contain interview testimonials.
+      </h6>
+    </section>
 
-      <section class="bg-light" id="authorities">
-        <h6 class="display-6">This section will contain authority testimonials.</h6>
-      </section>
+    <section class="bg-light" id="authorities">
+      <h6 class="display-6">
+        This section will contain authority testimonials.
+      </h6>
+    </section>
 
-      <section class="" id="peers">
-        <h6 class="display-6">This section will contain peer testimonials.</h6>
-      </section>
+    <section class="" id="peers">
+      <h6 class="display-6">This section will contain peer testimonials.</h6>
+    </section>
 
-      <section class="bg-light" id="blogs">
-        <h6 class="display-6">This section will contain blog testimonials.</h6>
-      </section>
+    <section class="bg-light" id="blogs">
+      <h6 class="display-6">This section will contain blog testimonials.</h6>
+    </section>
 
-      <section class="" id="press">
-        <h6 class="display-6">This section will contain press testimonials.</h6>
-      </section> {% endcomment %}
-    </div>
+    <section class="" id="press">
+      <h6 class="display-6">This section will contain press testimonials.</h6>
+    </section>
+    {% endcomment %}
   </div>
+</div>
 {% endblock %}

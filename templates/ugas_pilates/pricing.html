@@ -1,24 +1,24 @@
 {% extends 'ugas_pilates/base.html' %} {% load static %} {% block content %}
 <div id="pricing" class="padding main-content py-5 px-sm-5 mx-md-5 m-5">
-  <h2 class="text-center mt-5 display-2">Your Value</h2>
+  <h2 class="text-center my-5 display-2">Your Value</h2>
 
-  <div class="container">
-    <div class="row">
+  {% comment %} <div class="container"> {% endcomment %}
+    <div class="row gx-5 gy-3">
       <div id="solo" class="col col-12 col-lg-6">
         <h6 class="display-6">Solo Sessions</h6>
         <table class="table">
           <tbody>
             <tr>
               <td>1 Session</td>
-              <td>€ 20</td>
+              <td class="text-end">€ 20</td>
             </tr>
             <tr>
               <td>10 Sessions</td>
-              <td>€ 180</td>
+              <td class="text-end">€ 180</td>
             </tr>
             <tr>
               <td>25 Sessions</td>
-              <td>€ 400</td>
+              <td class="text-end">€ 400</td>
             </tr>
           </tbody>
         </table>
@@ -29,34 +29,34 @@
           <tbody>
             <tr>
               <td>1 Personal Session</td>
-              <td>€ 70</td>
+              <td class="text-end">€ 70</td>
             </tr>
             <tr>
               <td>1 Duo Session</td>
-              <td>€ 45 p.p.</td>
+              <td class="text-end">€ 45 p.p.</td>
             </tr>
             <tr>
               <td>10 Sessions</td>
-              <td>€ 630</td>
+              <td class="text-end">€ 630</td>
             </tr>
             <tr>
               <td>25 Sessions</td>
-              <td>€ 1400</td>
+              <td class="text-end">€ 1400</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div id="class" class="col col-12 col-lg-6">
-        <h6 class="display-6">Group Class</h6>
+        <h6 class="display-6">Group Classes</h6>
         <table class="table">
           <tbody>
             <tr>
               <td>1 Mat Class</td>
-              <td>€ 20</td>
+              <td class="text-end">€ 20</td>
             </tr>
             <tr>
-              <td>10 Classes</td>
-              <td>€ 180</td>
+              <td>10 Mat Classes</td>
+              <td class="text-end">€ 180</td>
             </tr>
           </tbody>
         </table>
@@ -67,12 +67,12 @@
           <tbody>
             <tr>
               <td>Membership</td>
-              <td>€ 400 / Month</td>
+              <td class="text-end">€ 200 / Month</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-  </div>
+  {% comment %} </div> {% endcomment %}
 </div>
 {% endblock content %}

@@ -1,5 +1,6 @@
 # Project files to ignore
 assets/
+node_modules/
 
 # BASIC FILES TO IGNORE
 # Byte-compiled / optimized / DLL files

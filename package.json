@@ -7,5 +7,9 @@
   "dependencies": {
     "bootstrap": "^5.0.0",
     "sass": "^1.32.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.2",
+    "prettier-plugin-django-template": "^0.1.1"
   }
 }
