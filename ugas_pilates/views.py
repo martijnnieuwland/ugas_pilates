@@ -1,3 +1,5 @@
+import os
+
 from django.shortcuts import render
 
 
@@ -5,7 +7,10 @@ def blog(request):
     return render(request, 'ugas_pilates/blog.html')
 
 def contact(request):
-    return render(request, 'ugas_pilates/contact.html')
+    context = {
+        "GM_KEY": os.getenv("GM_KEY"),
+    }
+    return render(request, 'ugas_pilates/contact.html', context)
 
 def faq(request):
     return render(request, 'ugas_pilates/faq.html')
