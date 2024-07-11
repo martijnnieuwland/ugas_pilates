@@ -1,6 +1,8 @@
 # Project files to ignore
 assets/
 node_modules/
+.env.development
+.env.production
 
 # BASIC FILES TO IGNORE
 # Byte-compiled / optimized / DLL files
