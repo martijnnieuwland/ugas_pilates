@@ -38,7 +38,7 @@
   <body class="">
     {% block nav %}
     <nav
-      class="navbar navbar-light pb-2 px-5 navbar-expand-md fixed-top navbar-custom"
+      class="navbar navbar-light pb-2 px-md-5 navbar-expand-md fixed-top navbar-custom"
       data-bs-theme="light"
     >
       <div class="container-xxl">
@@ -106,7 +106,7 @@
                   <a class="dropdown-item" href="{% url 'faq' %}">FAQ</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'blog' %}">Blog</a>
+                  <a class="dropdown-item" href="{% url 'blog:index' %}">Blog</a>
                 </li>
               </ul>
             </li>
@@ -194,7 +194,7 @@
                 <a href="{% url 'faq' %}">FAQs</a>
               </li>
               <li>
-                <a href="{% url 'blog' %}">Blog</a>
+                <a href="{% url 'blog:index' %}">Blog</a>
               </li>
               <li>
                 <a href="{% url 'contact' %}">Support</a>
