@@ -1,73 +1,72 @@
-{% extends 'ugas_pilates/base.html' %}
-{% load static %}
+{% extends 'ugas_pilates/base.html' %} {% load static %} {% block landing %}
 
-{% block content %}
 <!-- LANDING -->
+<div class="content vstack">
   <div id="landing">
     <div class="bg-image d-flex justify-content-center align-items-center">
       <div class="bg-overlay"></div>
       <div class="content text-center text-light">
         <h1 class="display-2 m-2 fw-lighter">Uga's Pilates</h1>
         <h5 class="display-5 m-1 fw-lighter text-muted">True pilates</h5>
-        <!-- <h6 class="display-6">Getting to your core</h6> -->
-        <a href="#" class="btn btn-outline-light btn-lg m-4 fw-lighter">Book a Session</a>
+        {% comment %}
+        <h6 class="display-6">Getting to your core</h6>
+        {% endcomment %}
+        <a href="#" class="btn btn-outline-light btn-lg m-4 fw-lighter">
+          Book a Session
+        </a>
       </div>
     </div>
   </div>
-
+  {% endblock landing %} {% block content %}
   <!-- STUDIO -->
   <section id="studio">
-    <div class="container-lg">
+    <div class="container-lg content position-relative">
       <div class="row justify-content-center align-items-center">
         <div class="col-md-5 text-center text-md-start">
           <h1>
             <div class="display-2">True Pilates</div>
             <div class="display-5 text-muted">True to Your Core</div>
           </h1>
-          <p class="lead my-4 text-muted">Experience the transformative power of authentic Pilates. Strengthen your core, improve flexibility, and enhance your overall well-being with expert-led classes.</p>
-            <a href="{% url 'schedule' %}" class="btn btn-secondary btn-lg">Book a session</a>
-          </div>
+          <p class="lead my-4 text-muted">
+            Experience the transformative power of authentic Pilates. Strengthen
+            your core, improve flexibility, and enhance your overall well-being
+            with expert-led classes.
+          </p>
+          <a href="{% url 'schedule' %}" class="btn btn-secondary btn-lg">
+            Book a session
+          </a>
           <div class="col-10 col-md-5 p-5 p-md-0 text-center d-md-block">
-            <img class="img-fluid rounded" src="{% static 'ugas_pilates/images/studio.jpg' %}" alt="Studio">
+            <img
+              class="img-fluid rounded"
+              src="{% static 'ugas_pilates/images/studio.jpg' %}"
+              alt="Studio"
+            />
           </div>
         </div>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
+</div>
 
-    <!-- INSTRUCTORS -->
-    <section id="instructors">
+<!-- INSTRUCTORS -->
+<section id="instructors"></section>
 
-    </section>
+<!-- TESTIMONIALS -->
+<section id="testimonials"></section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials">
+<!-- FAQ -->
+<section id="faq"></section>
 
-    </section>
+<!-- BLOG -->
+<section id="blog"></section>
 
-    <!-- FAQ -->
-    <section id="faq">
+<!-- SCHEDULE -->
+<section id="schedule"></section>
 
-    </section>
+<!-- PRICING -->
+<section id="pricing"></section>
 
-    <!-- BLOG -->
-    <section id="blog">
+<!-- CONTACT -->
+<section id="contact"></section>
 
-    </section>
-
-    <!-- SCHEDULE -->
-    <section id="schedule">
-
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing">
-
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-
-    </section>
-
-    {% endblock content %}
+{% endblock content %}

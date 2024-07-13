@@ -16,7 +16,7 @@ ul {
 /* Navbar */
 .navbar-custom {
   transition:
-    background-color 0.3s,
+    background-color 0.1s,
     color 0.5s,
     padding 0.5s,
     box-shadow 0.5s;
@@ -46,7 +46,8 @@ ul {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  position: relative;
+  width: 100%;
+  position: absolute;
   color: #fff;
 }
 
@@ -64,7 +65,6 @@ ul {
   position: relative;
   z-index: 2;
   /* Ensure text is above the overlay */
-  /* color: #dabf95; */
 }
 
 /* Google fonts */

@@ -36,12 +36,16 @@
   </head>
 
   <body class="">
+    {% block landing %}
+    {% endblock landing %}
+
     {% block nav %}
+
     <nav
-      class="navbar navbar-light pb-2 px-md-5 navbar-expand-md fixed-top navbar-custom"
+      class="navbar navbar-light navbar-expand-md sticky-top navbar-custom bg-body-none"
       data-bs-theme="light"
     >
-      <div class="container-xxl">
+      <div class="container-fluid">
         <a href="{% url 'home' %}" class="navbar-brand">
           <img
             src="{% static 'ugas_pilates/images/logo.svg' %}"
@@ -53,11 +57,12 @@
         </a>
         <!-- Toggle button for mobile -->
         <button
+          {% comment %} id="dropdown-button" {% endcomment %}
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#main-nav"
-          aria-controls="main-nav"
+          data-bs-target="#dropdown-content"
+          aria-controls="dropdown-content"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -67,9 +72,9 @@
         <!-- Navbar links -->
         <div
           class="collapse navbar-collapse justify-content-end align-center"
-          id="main-nav"
+          id="dropdown-content"
         >
-          <ul class="navbar-nav fw-light">
+          <ul class="navbar-nav fw-light text-end pe-3">
             <li class="nav-item">
               <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
@@ -106,7 +111,9 @@
                   <a class="dropdown-item" href="{% url 'faq' %}">FAQ</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'blog:index' %}">Blog</a>
+                  <a class="dropdown-item" href="{% url 'blog:index' %}">
+                    Blog
+                  </a>
                 </li>
               </ul>
             </li>
@@ -140,12 +147,6 @@
         </div>
       </div>
     </nav>
-    {% endblock %}
-    
-    {% block landing %}
-    {% endblock %}
-
-    {% block studio %}
     {% endblock %}
 
     {% block content %}
@@ -272,7 +273,10 @@
               </a>
             </div>
             <p>
-              <a style="text-decoration: none; color: inherit;" href="{% url 'admin:index' %}">
+              <a
+                style="text-decoration: none; color: inherit"
+                href="{% url 'admin:index' %}"
+              >
                 &copy;
               </a>
               2024 Cloudsurfer. All rights reserved.
