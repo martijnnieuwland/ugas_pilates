@@ -36,10 +36,7 @@
   </head>
 
   <body class="">
-    {% block landing %}
-    {% endblock landing %}
-
-    {% block nav %}
+    {% block landing %} {% endblock landing %} {% block nav %}
 
     <nav
       class="navbar navbar-light navbar-expand-md sticky-top navbar-custom bg-body-none"
@@ -57,7 +54,13 @@
         </a>
         <!-- Toggle button for mobile -->
         <button
-          {% comment %} id="dropdown-button" {% endcomment %}
+          {%
+          comment
+          %}
+          id="dropdown-button"
+          {%
+          endcomment
+          %}
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -147,12 +150,8 @@
         </div>
       </div>
     </nav>
-    {% endblock %}
 
-    {% block content %}
-    {% endblock %}
-
-    {% block footer %}
+    {% endblock %} {% block content %} {% endblock %} {% block footer %}
     <!-- FOOTER Content Start -->
     <footer class="footer bg-light p-4">
       <div class="container">
