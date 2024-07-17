@@ -1,11 +1,21 @@
-{% extends 'blog/base.html' %}
-
-{% block content %}
-
-  <h1>Detail page</h1>
-  <p>{{ post.title }}</p>
-  <p>{{ post.published }}</p>
-  <p>{{ post.text }}</p>
-  <p><a href="{% url 'blog:index' %}">Link to Index view</a></p>
-
+{% extends 'ugas_pilates/base.html' %} {% load static %} {% block content %}
+<div id="blog_detail">
+  <div class="container-md my-4">
+    <h1>{{ post.title }}</h1>
+    <div class="row position-relative">
+      <div class="col position-absolute top-50 z-n1">
+        <img
+          class="bg-cover w-100 object-fit-none position-fixed"
+          src="{% static 'ugas_pilates/images/pilates-pictures3.jpg' %}"
+          alt="Blog image"
+        />
+        <p>{{ post.published }}</p>
+      </div>
+    </div>
+    <div class="z-0">
+      <p>{{ post.text }}</p>
+      <p><a href="{% url 'blog:index' %}">Link to Index view</a></p>
+    </div>
+  </div>
+</div>
 {% endblock content %}
