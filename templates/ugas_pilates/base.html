@@ -21,6 +21,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="{% static 'ugas_pilates/css/custom.css' %}" />
     <link rel="stylesheet" href="{% static 'ugas_pilates/css/style.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,10 +42,10 @@
   <body class="">
     {% block landing %} {% endblock landing %} {% block nav %}
     <nav
-      class="navbar navbar-light navbar-expand-md sticky-top navbar-custom bg-body-none"
+      class="navbar navbar-light navbar-expand-md sticky-top navbar-custom bg-body-none px-md-5"
       data-bs-theme="light"
     >
-      <div class="container-fluid">
+      <div class="container-fluid px-md-5">
         <a href="{% url 'home' %}" class="navbar-brand">
           <img
             src="{% static 'ugas_pilates/images/logo.svg' %}"
@@ -228,12 +232,14 @@
           <div class="col-md-6">
             <address>
               <br />
-              Augustijnslei 295, 2930 Brasschaat, Belgium
+              <i class="bi bi-geo-fill"></i>
+                Augustijnslei 295, 2930 Brasschaat, Belgium
               <br />
-              E-mail:
-              <a href="mailto: ugana82@yahoo.de">ugana@uganaspilates.com</a>
+              <i class="bi bi-envelope-at-fill"></i>
+              <a href="mailto: ugana82@yahoo.de">  ugana@uganaspilates.com</a>
               <br />
-              Phone: +32 470 128513
+              <i class="bi bi-telephone-fill"></i>
+                +32 470 128513
             </address>
           </div>
           <div class="col-md-6 text-end">
