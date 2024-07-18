@@ -19,16 +19,21 @@
     </div>
   </div>
 </div>
-{% endblock landing %} {% block content %}
+{% endblock landing %}
+
+{% block content %}
 <!-- STUDIO -->
 <!-- Create space underneath absolute image -->
 <div class="min-vh-100 position-relative container-fluid d-flex justify-content-center">
+  {% comment "" %}
   <img
-    src="{% static 'ugas_pilates/images/logo-green-grey.svg' %}"
-    alt="Logo Uga's Pilates"
-    class="position-absolute bottom-0 start-50 translate-middle-x d-md-none"
+  src="{% static 'ugas_pilates/images/logo-green-grey.svg' %}"
+  alt="Logo Uga's Pilates"
+  class="position-absolute bottom-0 start-50 translate-middle-x d-md-none"
   />
-</div>
+  {% endcomment %}
+  </div>
+  {% comment "" %}
 <section id="studio" class="">
   <div class="container-lg">
     <div class="row justify-content-center align-items-center">
@@ -78,4 +83,5 @@
 <!-- CONTACT -->
 <section id="contact"></section>
 
+{% endcomment %}
 {% endblock content %}
