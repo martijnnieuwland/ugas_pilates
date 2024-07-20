@@ -142,8 +142,12 @@
         </div>
       </div>
     </nav>
+    {% endblock %}
 
-    {% endblock %} {% block content %} {% endblock %} {% block footer %}
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
     <!-- FOOTER Content Start -->
     <footer class="footer bg-altlight p-4">
       <div class="container">
@@ -288,5 +292,6 @@
     ></script>
     <!-- Project JavaScript -->
     <script src="{% static 'ugas_pilates/javascript/javascript.js' %}"></script>
+    {% block toggler_script %}{% endblock toggler_script %}
   </body>
 </html>

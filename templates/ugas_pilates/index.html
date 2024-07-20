@@ -1,28 +1,31 @@
-{% extends 'ugas_pilates/base.html' %} {% load static %} {% block landing %}
+{% extends 'ugas_pilates/base.html' %}
+{% load static %}
 
+{% block landing %}
 <!-- LANDING -->
 <div id="landing">
   <div class="bg-image d-flex justify-content-center align-items-center">
     <div class="bg-overlay"></div>
   </div>
 </div>
-{% endblock landing %} {% block nav_id %}home-nav{% endblock nav_id %}
+{% endblock landing %}
+
+{% block nav_id %}home-nav{% endblock nav_id %}
 
 {% block toggler_theme %}dark{% endblock toggler_theme %}
 
 {% block content %}
-<!-- STUDIO -->
-<!-- Create space underneath absolute image -->
+<!-- Text on top of background image -->
 <div
   class="min-vh-100 position-relative container-fluid d-flex justify-content-center"
   id="hero"
 >
   <div class="content text-center position-absolute top-50">
     <h1 class="display-2 m-2 text-altlight">Uga's Pilates</h1>
-    <h5 class="display-5 m-1 text-primary">True pilates</h5>
     {% comment %}
-    <h6 class="display-6">Getting to your core</h6>
+    <h5 class="display-5 m-1 text-secondary">True pilates</h5>
     {% endcomment %}
+    <h6 class="display-5 m-1 text-secondary">Getting to your core</h6>
     <a
       href="{% url 'schedule' %}"
       class="btn btn-outline-altlight btn-lg m-4 fw-lighter"
@@ -30,15 +33,9 @@
       Book a Session
     </a>
   </div>
-  {% comment "" %}
-  <img
-    src="{% static 'ugas_pilates/images/logo-green-grey.svg' %}"
-    alt="Logo Uga's Pilates"
-    class="position-absolute bottom-0 start-50 translate-middle-x d-md-none"
-  />
-  {% endcomment %}
 </div>
-{% comment %} {% comment "" %} {% endcomment %}
+
+<!-- STUDIO -->
 <section id="studio" class="bg-altlight py-5">
   <div class="container-lg">
     <div class="row justify-content-center align-items-center">
@@ -58,7 +55,10 @@
           your core, improve flexibility, and enhance your overall well-being
           with expert-led classes.
         </p>
-        <a href="{% url 'schedule' %}" class="btn btn-outline-altprimary btn-lg">
+        <a
+          href="{% url 'schedule' %}"
+          class="btn btn-outline-altprimary btn-lg"
+        >
           Book a session
         </a>
         <div class="col-10 col-md-5 p-5 p-md-0 text-center d-md-block"></div>
@@ -89,3 +89,21 @@
 <section id="contact"></section>
 
 {% endblock content %}
+
+{% block toggler_script %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar-custom');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 10) {
+        navbar.setAttribute('data-bs-theme', 'light');
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.setAttribute('data-bs-theme', 'dark');
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
+{% endblock toggler_script %}
