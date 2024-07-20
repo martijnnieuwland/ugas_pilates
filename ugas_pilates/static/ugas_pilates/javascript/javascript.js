@@ -12,3 +12,16 @@ window.addEventListener('scroll', function () {
 });
 });
 
+// document.addEventListener('DOMContentLoaded', function () {
+//   const navbar = document.querySelector('.navbar-custom');
+
+//   window.addEventListener('scroll', function () {
+//     if (window.scrollY > 10) {
+//       navbar.setAttribute('data-bs-theme', 'light');
+//       navbar.classList.add('scrolled');
+//     } else {
+//       navbar.setAttribute('data-bs-theme', 'dark');
+//       navbar.classList.remove('scrolled');
+//     }
+//   });
+// });

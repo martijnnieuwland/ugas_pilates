@@ -49,6 +49,10 @@ ul {
   color: var(--bs-primary);
 }
 
+#home-nav .nav {
+
+}
+
 /* Landing */
 .bg-image {
   background-image: url('../images/uga-sunpose2.jpg');

@@ -36,7 +36,7 @@
     <nav
       id="{% block nav_id %}{% endblock nav_id %}"
       class="navbar navbar-expand-md bg-body-none sticky-top navbar-custom px-md-5"
-      data-bs-theme=""
+      data-bs-theme="{% block toggler_theme %}light{% endblock toggler_theme %}"
     >
       <div class="container-fluid px-md-5">
         <a href="{% url 'home' %}" class="navbar-brand">
@@ -225,13 +225,13 @@
           <div class="col-md-6">
             <address>
               <br />
-              <i class="bi bi-geo-fill"></i>
+              <i class="bi bi-geo-fill text-primary"></i>
               Augustijnslei 295, 2930 Brasschaat, Belgium
               <br />
-              <i class="bi bi-envelope-at-fill"></i>
+              <i class="bi bi-envelope-at-fill text-primary"></i>
               <a href="mailto: ugana82@yahoo.de">ugana@uganaspilates.com</a>
               <br />
-              <i class="bi bi-telephone-fill"></i>
+              <i class="bi bi-telephone-fill text-primary"></i>
               +32 470 128513
             </address>
           </div>
