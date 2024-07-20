@@ -5,7 +5,7 @@
     "build-css": "sass ugas_pilates/static/ugas_pilates/sass/custom.scss ugas_pilates/static/ugas_pilates/css/custom.css"
   },
   "dependencies": {
-    "bootstrap": "^5.0.0",
+    "bootstrap": "^5.3.3",
     "sass": "^1.32.0"
   },
   "devDependencies": {

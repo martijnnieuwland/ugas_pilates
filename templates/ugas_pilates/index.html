@@ -1,40 +1,43 @@
-{% extends 'ugas_pilates/base.html' %}
-{% load static %}
-
-{% block landing %}
+{% extends 'ugas_pilates/base.html' %} {% load static %} {% block landing %}
 
 <!-- LANDING -->
 <div id="landing">
   <div class="bg-image d-flex justify-content-center align-items-center">
     <div class="bg-overlay"></div>
-    <div class="content text-center text-light">
-      <h1 class="display-2 m-2 fw-lighter">Uga's Pilates</h1>
-      <h5 class="display-5 m-1 fw-lighter text-muted">True pilates</h5>
-      {% comment %}
-      <h6 class="display-6">Getting to your core</h6>
-      {% endcomment %}
-      <a href="{% url 'schedule' %}" class="btn btn-outline-light btn-lg m-4 fw-lighter">
-        Book a Session
-      </a>
-    </div>
   </div>
 </div>
-{% endblock landing %}
+{% endblock landing %} {% block nav_id %}home-nav{% endblock nav_id %}
 
 {% block content %}
 <!-- STUDIO -->
 <!-- Create space underneath absolute image -->
-<div class="min-vh-100 position-relative container-fluid d-flex justify-content-center">
-  {% comment "" %}
-  <img
-  src="{% static 'ugas_pilates/images/logo-green-grey.svg' %}"
-  alt="Logo Uga's Pilates"
-  class="position-absolute bottom-0 start-50 translate-middle-x d-md-none"
-  />
-  {% endcomment %}
+<div
+  class="min-vh-100 position-relative container-fluid d-flex justify-content-center"
+  id="hero"
+>
+  <div class="content text-center position-absolute top-50">
+    <h1 class="display-2 m-2 text-altlight">Uga's Pilates</h1>
+    <h5 class="display-5 m-1 text-primary">True pilates</h5>
+    {% comment %}
+    <h6 class="display-6">Getting to your core</h6>
+    {% endcomment %}
+    <a
+      href="{% url 'schedule' %}"
+      class="btn btn-outline-altlight btn-lg m-4 fw-lighter"
+    >
+      Book a Session
+    </a>
   </div>
   {% comment "" %}
-<section id="studio" class="">
+  <img
+    src="{% static 'ugas_pilates/images/logo-green-grey.svg' %}"
+    alt="Logo Uga's Pilates"
+    class="position-absolute bottom-0 start-50 translate-middle-x d-md-none"
+  />
+  {% endcomment %}
+</div>
+{% comment %} {% comment "" %} {% endcomment %}
+<section id="studio" class="bg-altlight py-5">
   <div class="container-lg">
     <div class="row justify-content-center align-items-center">
       <div class="col col-8"></div>
@@ -53,7 +56,7 @@
           your core, improve flexibility, and enhance your overall well-being
           with expert-led classes.
         </p>
-        <a href="{% url 'schedule' %}" class="btn btn-secondary btn-lg">
+        <a href="{% url 'schedule' %}" class="btn btn-outline-altprimary btn-lg">
           Book a session
         </a>
         <div class="col-10 col-md-5 p-5 p-md-0 text-center d-md-block"></div>
@@ -83,5 +86,4 @@
 <!-- CONTACT -->
 <section id="contact"></section>
 
-{% endcomment %}
 {% endblock content %}

@@ -31,6 +31,7 @@ from django.urls import include, path
 sitemaps = {"static": StaticViewsSitemap,}
 
 urlpatterns = [
+    path("test/", views.testbed),
     path("admin/", admin.site.urls, name="admin"),
     path("", views.home, name="home"),
     path("blog/", include("blog.urls")),

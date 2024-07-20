@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function () {
+
 const navbar = document.querySelector('.navbar-custom');
 
 window.addEventListener('scroll', function () {
@@ -8,3 +10,5 @@ window.addEventListener('scroll', function () {
     navbar.classList.remove('scrolled');
   }
 });
+});
+

@@ -1,5 +1,8 @@
-{% extends 'ugas_pilates/base.html' %} {% load static %} {% block content %}
-<div id="pricing">
+{% extends 'ugas_pilates/base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="pricing" class="pb-5">
   <h2 class="text-center my-4 display-2">Your Value</h2>
 
   <div class="container-md">
@@ -74,7 +77,7 @@
       </div>
     </div>
     <div class="d-grid gap-2 mx-auto my-5">
-      <a href="{% url 'contact' %}" class="btn btn-outline-dark" role="button">
+      <a href="{% url 'contact' %}" class="btn btn-outline-primary" role="button">
         Book a session
       </a>
     </div>

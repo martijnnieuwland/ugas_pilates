@@ -20,7 +20,7 @@
           <h5 class="card-title">{{ post.title }}</h5>
           <p class="card-text text-muted small">{{ post.published }}</p>
           <p class="card-text">{{ post.text|truncatechars:70 }}</p>
-          <a href="{% url 'blog:detail' post.id %}" class="btn btn-outline-dark">
+          <a href="{% url 'blog:detail' post.id %}" class="btn btn-outline-primary">
             Read More
           </a>
         </div>

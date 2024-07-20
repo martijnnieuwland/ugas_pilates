@@ -3,6 +3,10 @@ assets/
 node_modules/
 .env.development
 .env.production
+templates/ugas_pilates/testbed.html
+sass/
+package-lock.json
+package.json
 
 # BASIC FILES TO IGNORE
 # Byte-compiled / optimized / DLL files

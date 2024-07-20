@@ -38,3 +38,6 @@ def terms(request):
 
 def testimonials(request):
     return render(request, 'ugas_pilates/testimonials.html')
+
+def testbed(request):
+    return render(request, 'ugas_pilates/testbed.html')
