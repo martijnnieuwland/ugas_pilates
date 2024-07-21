@@ -21,7 +21,7 @@
   id="hero"
 >
   <div class="content text-center position-absolute top-50">
-    <h1 class="display-2 m-2 text-altlight opacity-50">Uga's Pilates</h1>
+    <h1 class="display-2 m-2 text-altlight opacity-75">Uga's Pilates</h1>
     {% comment %}
     <h5 class="display-5 m-1 text-secondary">True pilates</h5>
     {% endcomment %}
@@ -36,34 +36,32 @@
 </div>
 
 <!-- STUDIO -->
-<section id="studio" class="bg-altlight py-5">
-  <div class="container-lg">
+<section id="studio" class="bg-white py-5">
+  <div class="container-md">
     <div class="row justify-content-center align-items-center">
-      <div class="col col-8"></div>
-      <div class="col-md-5 text-center text-md-start">
-        <h1>
-          <div class="display-2">True Pilates</div>
-          <div class="display-5 text-muted">True to Your Core</div>
-        </h1>
+      <div class="col col-md-6">
         <img
           class="img-fluid rounded"
           src="{% static 'ugas_pilates/images/studio.jpg' %}"
           alt="Studio"
         />
+      </div>
+      <div class="col-md-6 text-center text-md-start">
+        <h2 class="display-2">True Pilates</h2>
+        <h6 class="display-6 text-muted">True to Your Core</h6>
         <p class="lead my-4 text-muted">
           Experience the transformative power of authentic Pilates. Strengthen
           your core, improve flexibility, and enhance your overall well-being
           with expert-led classes.
         </p>
-        <a
-          href="{% url 'schedule' %}"
-          class="btn btn-outline-altprimary btn-lg"
-        >
+        <a href="{% url 'schedule' %}" class="btn btn-primary btn-lg">
           Book a session
         </a>
-        <div class="col-10 col-md-5 p-5 p-md-0 text-center d-md-block"></div>
       </div>
     </div>
+    {% comment %}
+    <div class="col-10 col-md-5 p-5 p-md-0 text-center d-md-block"></div>
+    {% endcomment %}
   </div>
 </section>
 

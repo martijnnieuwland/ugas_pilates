@@ -21,8 +21,7 @@ ul {
     color 0.5s,
     padding 0.5s,
     box-shadow 0.5s;
-  padding: 10px 20px;
-
+  padding: 0px 20px;
 }
 
 .navbar-custom.scrolled {
@@ -54,7 +53,6 @@ ul {
 
 #home-nav.scrolled .nav-link:hover {
   color: var(--bs-tertiary);
-  background-color: var(--bs-primary);
 }
 
 #home-nav #ugas {
