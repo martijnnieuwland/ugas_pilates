@@ -39,18 +39,19 @@ urlpatterns = [
     path("instructors/", views.instructors, name="instructors"),
     path("testimonials/", views.testimonials, name="testimonials"),
     path("faq/", views.faq, name="faq"),
-    # path("blog/", views.blog, name="blog"),
     path("schedule/", views.schedule, name="schedule"),
     path("pricing/", views.pricing, name="pricing"),
     path("contact/", views.contact, name="contact"),
     path("privacy-policy/", views.privacy, name="privacy"),
     path("terms-of-service/", views.terms, name="terms"),
     path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
+    path("ckeditor/", include("ckeditor_uploader.urls")),
 ]
 
 # Conditionally add static URL patterns for development
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if not settings.TESTING:
     urlpatterns = [
