@@ -1,9 +1,11 @@
 {% extends 'ugas_pilates/base.html' %}
 {% load static %}
 
+{% block page_title %}{{title}} | {% endblock page_title %}
+
 {% block content %}
 <div id="terms" class="pb-5">
-  <h2 class="text-center my-4 display-2">Terms of Service</h2>
+  <h2 class="text-center my-4 display-2">{{ heading }}</h2>
   <div class="container-md">
     <ol>
     <li class="text-decoration-underline">Introduction:</li>

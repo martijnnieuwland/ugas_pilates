@@ -1,9 +1,11 @@
 {% extends 'ugas_pilates/base.html' %}
 {% load static %}
 
+{% block page_title %}{{title}} | {{heading}} | {{ seo }} | {% endblock page_title %}
+
 {% block content %}
 <div id="faq" class="pb-5">
-  <h2 class="text-center display-2 my-4">Frequently Asked Questions</h2>
+  <h2 class="text-center display-2 my-4">{{ heading }}</h2>
 
   <div class="container-md">
     <div class="accordion accordion-flush" id="faq">
