@@ -3,41 +3,38 @@
 <link
   rel="icon"
   type="image/svg+xml"
-  href="{% static 'ugas_pilates/images/logo-green-grey.svg' %}"
+  href="{% static 'ugas_pilates/images/logo-primary-altlight-outline.svgj' %}"
 />
-{% endblock %} {% block landing %}
+{% endblock %}
+
+{% block landing %}
 <!-- LANDING -->
 <div id="landing">
-  <div class="bg-image d-flex justify-content-center align-items-center">
+  <div class="bg-image d-flex">
     <div class="bg-overlay"></div>
   </div>
 </div>
-{% endblock landing %} {% block nav_id %}home-nav{% endblock nav_id %}
-{% block toggler_theme %}dark{% endblock toggler_theme %} {% block content %}
+{% endblock landing %}
+
+{% block nav_id %}home-nav{% endblock nav_id %}
+
+{% block toggler_theme %}dark{% endblock toggler_theme %}
+
+{% block content %}
 <!-- Text on top of background image -->
-<div
-  class="min-vh-100 position-relative container-fluid d-flex justify-content-center"
-  id="hero"
->
-  <div
-    class="container content text-center position-absolute top-50 start-50 translate-middle"
-  >
-    <div class="row">
-      <div class="col col-12 col-lg-8">
-        <h1 class="display-2 m-2 text-altlight opacity-75">Uga's Pilates</h1>
-        {% comment %}
-        <h5 class="display-5 m-1 text-secondary">True pilates</h5>
-        {% endcomment %}
-        <h6 class="display-5 m-1 text-secondary">{{ heading }}</h6>
-        <a
-          href="{% url 'contact' %}"
-          class="btn btn-altdark btn-lg m-4 fw-lighter"
-        >
-          Book a Session
-        </a>
-      </div>
-      <div class="col col-lg-4"></div>
+<div class="container vh-100 position-relative">
+  <div id="hero" class="row h-auto">
+    <div class="col text-center text-md-start">
+      <h1 class="display-2 m-2 text-altlight opacity-75">Uga's Pilates</h1>
+      <h6 class="display-5 m-1 text-secondary">{{ heading }}</h6>
+      <a
+        href="{% url 'contact' %}"
+        class="btn btn-primary btn-lg m-4 fw-lighter"
+      >
+        Book a Session
+      </a>
     </div>
+    {% comment %} <div class="col col-lg-4"></div> {% endcomment %}
   </div>
 </div>
 
