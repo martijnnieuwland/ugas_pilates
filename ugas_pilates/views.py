@@ -23,7 +23,7 @@ def faq(request):
 def home(request):
     context = {
         "title": "Uga's Pilates - True Pilates",
-        "heading": "Getting to your core",
+        "heading": "True to the core""",
     }
     return render(request, 'ugas_pilates/index.html', context)
 

@@ -6,15 +6,14 @@
 <link
   rel="icon"
   type="image/svg+xml"
-  href="{% static 'ugas_pilates/images/logo-green-grey.svg' %}"
+  href="{% static 'ugas_pilates/images/logo-primary-altlight-outline.svg' %}"
 />
 {% endblock %}
-
 
 {% block landing %}
 <!-- LANDING -->
 <div id="landing">
-  <div class="bg-image d-flex justify-content-center align-items-center">
+  <div class="bg-image d-flex">
     <div class="bg-overlay"></div>
   </div>
 </div>
@@ -26,22 +25,18 @@
 
 {% block content %}
 <!-- Text on top of background image -->
-<div
-  class="min-vh-100 position-relative container-fluid d-flex justify-content-center"
-  id="hero"
->
-  <div class="content text-center position-absolute top-50 start-50 translate-middle">
-    <h1 class="display-2 m-2 text-altlight opacity-75">Uga's Pilates</h1>
-    {% comment %}
-    <h5 class="display-5 m-1 text-secondary">True pilates</h5>
-    {% endcomment %}
-    <h6 class="display-5 m-1 text-secondary">{{ heading }}</h6>
-    <a
-      href="{% url 'contact' %}"
-      class="btn btn-altdark btn-lg m-4 fw-lighter"
-    >
-      Book a Session
-    </a>
+<div class="container vh-100 position-relative">
+  <div id="hero" class="row h-auto">
+    <div class="col text-center text-md-start ps-md-5 ms-md-5">
+      <h1 class="display-2 m-2 text-altlight opacity-75">Uga's Pilates</h1>
+      <h5 class="display-5 m-1 text-secondary">{{ heading }}</h5>
+      <a
+        href="{% url 'contact' %}"
+        class="btn btn-primary btn-lg m-4 fw-lighter"
+      >
+        Book a Session
+      </a>
+    </div>
   </div>
 </div>
 
@@ -69,9 +64,6 @@
         </a>
       </div>
     </div>
-    {% comment %}
-    <div class="col-10 col-md-5 p-5 p-md-0 text-center d-md-block"></div>
-    {% endcomment %}
   </div>
 </section>
 
@@ -96,10 +88,8 @@
 <!-- CONTACT -->
 <section id="contact"></section>
 
-{% endblock content %}
-
-{% block toggler_script %}
-<script>
+{% endblock content %} {% block toggler_script %}
+{% comment %} <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar-custom');
 
@@ -113,5 +103,5 @@
       }
     });
   });
-</script>
+</script> {% endcomment %}
 {% endblock toggler_script %}
