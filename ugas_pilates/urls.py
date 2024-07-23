@@ -20,6 +20,7 @@ from . import views
 from .sitemaps import StaticViewsSitemap
 
 from debug_toolbar.toolbar import debug_toolbar_urls
+from filebrowser.sites import site
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -32,6 +33,9 @@ sitemaps = {"static": StaticViewsSitemap,}
 
 urlpatterns = [
     path("test/", views.testbed),
+    path("admin/filebrowser/", site.urls),
+    path("grappelli", include("grappelli.urls")),
+    path("tinymce/", include("tinymce.urls")),
     path("admin/", admin.site.urls, name="admin"),
     path("", views.home, name="home"),
     path("blog/", include("blog.urls")),
@@ -45,7 +49,6 @@ urlpatterns = [
     path("privacy-policy/", views.privacy, name="privacy"),
     path("terms-of-service/", views.terms, name="terms"),
     path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
-    path("ckeditor/", include("ckeditor_uploader.urls")),
 ]
 
 # Conditionally add static URL patterns for development

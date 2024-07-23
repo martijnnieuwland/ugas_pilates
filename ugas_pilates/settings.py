@@ -19,7 +19,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load environment variables from .env file
-env_path = BASE_DIR / f".env.{os.getenv('DJANGO_ENV', 'development')}"
+env_path = BASE_DIR / f".env.{os.getenv("DJANGO_ENV", "development")}"
 load_dotenv(dotenv_path=env_path)
 
 # Quick-start development settings - unsuitable for production
@@ -35,6 +35,12 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(",")
 
 # Application definition
 INSTALLED_APPS = [
+    # Third party apps
+    "grappelli",
+    "filebrowser",
+    "tinymce",
+
+    # Django
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -42,11 +48,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sitemaps",
+
     # Project apps
     "blog",
-    # Third party apps
-    "ckeditor",
-    "ckeditor_uploader",
 ]
 
 MIDDLEWARE = [
@@ -96,9 +100,6 @@ INTERNAL_IPS = [
 
 WSGI_APPLICATION = "ugas_pilates.wsgi.application"
 
-# CKEditor settings
-CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -155,7 +156,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 # Directory for collected static files in production
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # URL prefix for static files
 STATIC_URL = "/static/"
 
@@ -165,5 +166,10 @@ STATICFILES_DIRS = [
 ]
 
 # Media settings
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = "/media/"
+
+
+# Filebrowser settings
+FILEBROWSER_DIRECTORY = "uploads/"
+FILEBROWSER_VERSIONS_BASEDIR = "_versions/"

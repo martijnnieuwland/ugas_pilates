@@ -5,23 +5,27 @@
 
 {% block content %}
 <div id="blog_detail">
-  <h2 class="display-2 text-center my-4">{{ heading }}</h2>
   <div class="container-md my-4">
+    <h2 class="display-2 text-center my-4">{{ heading }}</h2>
     <div class="row justify-content-center">
       <div class="col col-lg-8">
+        {% if post.banner %}
         <img
+          id="banner"
           class="object-fit-cover img-fluid"
-          src="{% static 'ugas_pilates/images/pilates-pictures3.jpg' %}"
-          alt="Blog image"
+          src={{ post.banner.url }}
+          alt="Blog banner"
         />
-        <p class="text-end"><small>{{ post.published }}</small></p>
+        {% endif %}
       </div>
     </div>
-    <p>{{ post.text }}</p>
+    <p class="text-start"><small>{{ post.published }}</small></p>
+    <p class="lead my-5">{{ post.lead }}</p>
+    <p>{{ post.text|safe }}</p>
     <p>
       <a
         href="{% url 'blog:index' %}"
-        class="btn btn-outline-primary"
+        class="btn btn-primary my-5"
         role="button"
       >
         Back to blog catalog
