@@ -7,6 +7,7 @@ templates/ugas_pilates/testbed.html
 sass/
 package-lock.json
 package.json
+ugas_pilates/ugas_pilates.code-workspace
 
 # BASIC FILES TO IGNORE
 # Byte-compiled / optimized / DLL files
