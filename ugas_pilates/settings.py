@@ -173,3 +173,8 @@ MEDIA_URL = "/media/"
 # Filebrowser settings
 FILEBROWSER_DIRECTORY = "uploads/"
 FILEBROWSER_VERSIONS_BASEDIR = "_versions/"
+
+
+# Grappelli settings
+# https://django-grappelli.readthedocs.io/en/latest/customization.html
+GRAPPELLI_ADMIN_TITLE = "Uga's Pilates"
