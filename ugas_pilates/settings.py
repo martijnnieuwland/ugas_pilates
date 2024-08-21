@@ -19,7 +19,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load environment variables from .env file
-env_path = BASE_DIR / f".env.{os.getenv("DJANGO_ENV", "development")}"
+env_path = BASE_DIR / f".env.{os.getenv('DJANGO_ENV', 'production')}"
 load_dotenv(dotenv_path=env_path)
 
 # Quick-start development settings - unsuitable for production
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     "grappelli",
     "filebrowser",
     "tinymce",
-
     # Django
     "django.contrib.admin",
     "django.contrib.auth",
@@ -48,7 +47,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sitemaps",
-
     # Project apps
     "blog",
 ]
