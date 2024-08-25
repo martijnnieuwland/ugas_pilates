@@ -19,7 +19,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load environment variables from .env file
-env_path = BASE_DIR / f".env.{os.getenv('DJANGO_ENV', 'production')}"
+env_path = BASE_DIR / f".env.{os.getenv('DJANGO_ENV', 'development')}"
 load_dotenv(dotenv_path=env_path)
 
 # Quick-start development settings - unsuitable for production
@@ -153,10 +153,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+# URL prefix for static files
+STATIC_URL = "static/"
 # Directory for collected static files in production
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-# URL prefix for static files
-STATIC_URL = "/static/"
 
 # Additional directories for static files during development
 STATICFILES_DIRS = [
@@ -164,8 +164,8 @@ STATICFILES_DIRS = [
 ]
 
 # Media settings
+MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-MEDIA_URL = "/media/"
 
 
 # Filebrowser settings
