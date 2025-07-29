@@ -100,6 +100,7 @@ dmypy.json
 
 # Environments
 .env
+.env*
 .venv
 env/
 venv/
