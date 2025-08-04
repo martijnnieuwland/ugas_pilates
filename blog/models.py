@@ -1,9 +1,15 @@
 from django.db import models
 from tinymce import models as tinymce_models
 
+
 # Create your models here.
 class Post(models.Model):
-    banner = models.ImageField(null=True, blank=True, upload_to="blog_images/")
+    banner = models.ImageField(
+        null=True,
+        blank=True,
+        upload_to="blog_images/",
+        default="blog_images/logo-tertiary-altdark.jpg",
+    )
     title = models.CharField(max_length=140)
     lead = models.TextField()
     text = tinymce_models.HTMLField()
