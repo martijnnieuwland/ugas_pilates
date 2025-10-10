@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path("blog/", include("blog.urls"))
 """
+
 import sys
 
 from . import views
@@ -29,7 +30,9 @@ from django.contrib.sitemaps.views import sitemap
 from django.urls import include, path
 
 
-sitemaps = {"static": StaticViewsSitemap,}
+sitemaps = {
+    "static": StaticViewsSitemap,
+}
 
 urlpatterns = [
     path("test/", views.testbed),
@@ -37,18 +40,14 @@ urlpatterns = [
     path("grappelli", include("grappelli.urls")),
     path("tinymce/", include("tinymce.urls")),
     path("admin/", admin.site.urls, name="admin"),
-    path("", views.home, name="home"),
     path("blog/", include("blog.urls")),
-    path("studio/", views.studio, name="studio"),
-    path("instructors/", views.instructors, name="instructors"),
-    path("testimonials/", views.testimonials, name="testimonials"),
-    path("faq/", views.faq, name="faq"),
-    path("schedule/", views.schedule, name="schedule"),
-    path("pricing/", views.pricing, name="pricing"),
-    path("contact/", views.contact, name="contact"),
-    path("privacy-policy/", views.privacy, name="privacy"),
-    path("terms-of-service/", views.terms, name="terms"),
-    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
+    path("", include("pages.urls")),
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": sitemaps},
+        name="django.contrib.sitemaps.views.sitemap",
+    ),
 ]
 
 # Conditionally add static URL patterns for development
