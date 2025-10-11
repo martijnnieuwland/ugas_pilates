@@ -155,18 +155,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 # URL prefix for static files
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 # Directory for collected static files in production
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
+STATIC_ROOT = BASE_DIR / "staticfiles"
 # Additional directories for static files during development
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "ugas_pilates/static"),
-]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Media settings
-MEDIA_URL = "media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 
 # Filebrowser settings

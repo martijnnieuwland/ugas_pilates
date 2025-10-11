@@ -1,9 +1,5 @@
-{% extends 'ugas_pilates/base.html' %}
-{% load static %}
-
-{% block page_title %}{{title}} | {{heading}} | {{ seo }} | {% endblock page_title %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block page_title %}{{title}} |
+{{heading}} | {{ seo }} | {% endblock page_title %} {% block content %}
 <div id="instructors" class="pb-5">
   <h2 class="text-center display-2 my-4">{{ heading }}</h2>
 
@@ -13,7 +9,7 @@
         <h3 class="display-4 text-center">Ugana Maidarjav</h3>
         <img
           class="col-12 col-sm-6 mx-sm-auto d-block float-md-end col-lg-4 ms-md-3 mb-3 rounded"
-          src="{% static 'ugas_pilates/images/UgaMountainPose.jpg' %}"
+          src="{% static 'images/UgaMountainPose.jpg' %}"
           alt="Ugana Maidarjav"
         />
         <p class="">
@@ -48,37 +44,35 @@
         <h3 class="display-4 text-center">Master Pilates Trainer Anna Rubau</h3>
         <img
           class="col-12 col-sm-6 mx-sm-auto d-block float-md-start col-lg-4 me-md-3 mb-3 rounded"
-          src="{% static 'ugas_pilates/images/anna.jpg' %}"
+          src="{% static 'images/anna.jpg' %}"
           alt="Anna Rubau"
         />
         <p class="">
-          We are delighted to introduce Anna,
-          a Master Pilates Trainer whose expertise and dedication have
-          profoundly shaped our Pilates community. Anna has been a guiding light
-          for many, including our very own instructor, Ugana, who completed her
-          True Pilates Teacher Training under Anna's exceptional mentorship.
-          <br>
-          <br>
+          We are delighted to introduce Anna, a Master Pilates Trainer whose
+          expertise and dedication have profoundly shaped our Pilates community.
+          Anna has been a guiding light for many, including our very own
+          instructor, Ugana, who completed her True Pilates Teacher Training
+          under Anna's exceptional mentorship.
+          <br />
+          <br />
           With years of experience and a deep understanding of the Pilates
           method, Anna has earned a reputation as one of the foremost Pilates
           trainers in the field. Her approach combines precision, care, and a
           personalized touch, ensuring that each trainee reaches their full
           potential.
-          <br>
-          <br>
-          Though Anna is currently based in Spain, her influence
-          continues to resonate here in Antwerp. For those interested in
-          becoming a Pilates instructor, Ugana offers hands-on training to help
-          you gain experience and hone your skills. Once you’re ready, you have
-          the unique opportunity to complete your formal teacher training with
-          Anna, benefiting from her extensive knowledge and mastery of the
-          practice.
-          <br>
-          <br>
-          Whether you're taking your first steps into the world of
-          Pilates or looking to deepen your practice, Anna’s legacy and
-          expertise are available to guide you on your journey through our
-          studio.
+          <br />
+          <br />
+          Though Anna is currently based in Spain, her influence continues to
+          resonate here in Antwerp. For those interested in becoming a Pilates
+          instructor, Ugana offers hands-on training to help you gain experience
+          and hone your skills. Once you’re ready, you have the unique
+          opportunity to complete your formal teacher training with Anna,
+          benefiting from her extensive knowledge and mastery of the practice.
+          <br />
+          <br />
+          Whether you're taking your first steps into the world of Pilates or
+          looking to deepen your practice, Anna’s legacy and expertise are
+          available to guide you on your journey through our studio.
         </p>
       </div>
     </div>

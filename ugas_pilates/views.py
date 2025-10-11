@@ -8,4 +8,4 @@ def testbed(request):
         "heading": "Hear it from our hard core!",
         "seo": "Why our customers choose us",
     }
-    return render(request, 'ugas_pilates/testbed.html', context)
+    return render(request, 'testbed.html', context)

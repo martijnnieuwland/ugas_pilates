@@ -37,7 +37,7 @@ sitemaps = {
 urlpatterns = [
     path("test/", views.testbed),
     path("admin/filebrowser/", site.urls),
-    path("grappelli", include("grappelli.urls")),
+    path("grappelli/", include("grappelli.urls")),
     path("tinymce/", include("tinymce.urls")),
     path("admin/", admin.site.urls, name="admin"),
     path("blog/", include("blog.urls")),
