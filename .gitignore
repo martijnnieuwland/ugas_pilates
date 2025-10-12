@@ -3,6 +3,7 @@ assets/
 node_modules/
 .env.development
 .env.production
+.env*
 templates/ugas_pilates/testbed.html
 sass/
 package-lock.json
