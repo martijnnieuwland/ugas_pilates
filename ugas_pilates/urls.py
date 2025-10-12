@@ -15,19 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path("blog/", include("blog.urls"))
 """
 
-import sys
-
-from . import views
-from .sitemaps import StaticViewsSitemap
-
-from debug_toolbar.toolbar import debug_toolbar_urls
-from filebrowser.sites import site
-
 from django.conf import settings
-from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import include, path
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+from . import views
+from .sitemaps import StaticViewsSitemap
+from filebrowser.sites import site
+
+if "debug_toolbar" in settings.INSTALLED_APPS:
+    import debug_toolbar
 
 
 sitemaps = {
@@ -50,12 +50,13 @@ urlpatterns = [
     ),
 ]
 
-# Conditionally add static URL patterns for development
+# Conditionally add static and debug_toolbar URL patterns for development
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # Serve static/media in dev
+
+    urlpatterns = staticfiles_urlpatterns() + urlpatterns
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-if not settings.TESTING:
-    urlpatterns = [
-        *urlpatterns,
-    ] + debug_toolbar_urls()
+    # Debug toolbar
+    if "debug_toolbar" in settings.INSTALLED_APPS:
+        urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
