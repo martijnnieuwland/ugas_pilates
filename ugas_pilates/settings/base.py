@@ -13,6 +13,7 @@ env_path = BASE_DIR / f".env.{os.getenv('DJANGO_ENV', 'development')}"
 load_dotenv(dotenv_path=env_path)
 
 SECRET_KEY = os.getenv("SECRET_KEY", "insecure-development-key")
+GM_KEY = os.getenv("GM_KEY", "")
 DEBUG = os.getenv("DEBUG") == "True"
 ALLOWED_HOSTS = [host.strip() for host in os.getenv("ALLOWED_HOSTS", "").split(",") if host]
 
