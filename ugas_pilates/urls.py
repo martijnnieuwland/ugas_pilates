@@ -26,6 +26,9 @@ from . import views
 from .sitemaps import StaticViewsSitemap
 from filebrowser.sites import site
 
+from ugas_pilates.admin import custom_admin_site
+
+
 if "debug_toolbar" in settings.INSTALLED_APPS:
     import debug_toolbar
 
@@ -39,7 +42,7 @@ urlpatterns = [
     path("admin/filebrowser/", site.urls),
     path("grappelli/", include("grappelli.urls")),
     path("tinymce/", include("tinymce.urls")),
-    path("admin/", admin.site.urls, name="admin"),
+    path("admin/", custom_admin_site.urls, name="admin"),
     path("blog/", include("blog.urls")),
     path("", include("pages.urls")),
     path(

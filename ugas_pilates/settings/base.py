@@ -107,7 +107,7 @@ FILEBROWSER_DIRECTORY = "uploads/"
 FILEBROWSER_VERSIONS_BASEDIR = "_versions/"
 
 # Grappelli
-GRAPPELLI_ADMIN_TITLE = "Uga's Pilates"
+GRAPPELLI_ADMIN_TITLE = "Uga's Pilates Admin"
 
 # TinyMCE
 TINYMCE_DEFAULT_CONFIG = {
