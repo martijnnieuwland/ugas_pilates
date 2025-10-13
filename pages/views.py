@@ -2,7 +2,7 @@ import os
 
 from django.shortcuts import render
 
-from pages.models import Instructor
+from pages.models import Instructor, Pricelist
 
 
 def contact(request):
@@ -44,10 +44,12 @@ def instructor(request):
 
 
 def pricing(request):
+    pricelists = Pricelist.objects.prefetch_related('items')
     context = {
         "title": "Pricing",
         "heading": "Your Value",
-        "seo": "Train for only €20",
+        "seo": "Discover your worth",
+        "pricelists": pricelists,
     }
     return render(request, "pages/pricing.html", context)
 
