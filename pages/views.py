@@ -2,6 +2,8 @@ import os
 
 from django.shortcuts import render
 
+from pages.models import Instructor
+
 
 def contact(request):
     context = {
@@ -30,11 +32,13 @@ def home(request):
     return render(request, "pages/index.html", context)
 
 
-def instructors(request):
+def instructor(request):
+    instructors = Instructor.objects.all()
     context = {
         "title": "Instructors",
         "heading": "Meet Your Instructor",
         "seo": "Dedicated to your wellbeing",
+        "instructors": instructors,
     }
     return render(request, "pages/instructors.html", context)
 

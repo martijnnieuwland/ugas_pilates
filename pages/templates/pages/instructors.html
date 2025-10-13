@@ -1,80 +1,29 @@
-{% extends 'base.html' %} {% load static %} {% block page_title %}{{title}} |
-{{heading}} | {{ seo }} | {% endblock page_title %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+{{title}} | {{heading}} | {{ seo }} |
+{% endblock page_title %}
+
+{% block content %}
 <div id="instructors" class="pb-5">
   <h2 class="text-center display-2 my-4">{{ heading }}</h2>
 
   <div class="container-md">
     <div class="row mb-5">
+      {% for instructor in instructors %}
       <div class="clearfix">
-        <h3 class="display-4 text-center">Ugana Maidarjav</h3>
+        <hr />
+        <h3 class="display-4 text-center">{{ instructor.name }}</h3>
+        <hr />
         <img
           class="col-12 col-sm-6 mx-sm-auto d-block float-md-end col-lg-4 ms-md-3 mb-3 rounded"
-          src="{% static 'images/UgaMountainPose.jpg' %}"
-          alt="Ugana Maidarjav"
+          src="{{ instructor.photo.url }}"
+          alt="{{ instructor.name }}"
         />
-        <p class="">
-          Meet Ugana, a passionate and highly experienced Pilates instructor who
-          brings a unique blend of artistic flair and meticulous discipline to
-          her practice. Born in Khovd, Mongolia, Ugana began her journey as a
-          contortionist, honing her skills from a young age. Her career as a
-          performance artist took her across the globe, allowing her to share
-          her talent and dedication with audiences worldwide.
-          <br />
-          <br />
-          With a background in hospitality and performance, Ugana has a deep
-          appreciation for customer service and a keen eye for detail. She
-          transitioned to yoga after the birth of her twin girls and completed
-          her RYT200 training at Global Yoga Shala in France. Now, she combines
-          her extensive knowledge of body movement and her passion for wellness
-          to guide her clients towards a stronger core and improved flexibility
-          through authentic Pilates practice.
-          <br />
-          <br />
-          Join Ugana at Uga's Pilates and experience the transformative power of
-          her expertise and dedication. Whether you're a beginner or an
-          experienced practitioner, Ugana's classes will inspire and challenge
-          you, helping you achieve your fitness goals and enhance your overall
-          well-being.
-        </p>
+        <p class="">{{ instructor.bio|linebreaksbr }}</p>
       </div>
-    </div>
-    <hr />
-    <div class="row">
-      <div class="clearfix">
-        <h3 class="display-4 text-center">Master Pilates Trainer Anna Rubau</h3>
-        <img
-          class="col-12 col-sm-6 mx-sm-auto d-block float-md-start col-lg-4 me-md-3 mb-3 rounded"
-          src="{% static 'images/anna.jpg' %}"
-          alt="Anna Rubau"
-        />
-        <p class="">
-          We are delighted to introduce Anna, a Master Pilates Trainer whose
-          expertise and dedication have profoundly shaped our Pilates community.
-          Anna has been a guiding light for many, including our very own
-          instructor, Ugana, who completed her True Pilates Teacher Training
-          under Anna's exceptional mentorship.
-          <br />
-          <br />
-          With years of experience and a deep understanding of the Pilates
-          method, Anna has earned a reputation as one of the foremost Pilates
-          trainers in the field. Her approach combines precision, care, and a
-          personalized touch, ensuring that each trainee reaches their full
-          potential.
-          <br />
-          <br />
-          Though Anna is currently based in Spain, her influence continues to
-          resonate here in Antwerp. For those interested in becoming a Pilates
-          instructor, Ugana offers hands-on training to help you gain experience
-          and hone your skills. Once you’re ready, you have the unique
-          opportunity to complete your formal teacher training with Anna,
-          benefiting from her extensive knowledge and mastery of the practice.
-          <br />
-          <br />
-          Whether you're taking your first steps into the world of Pilates or
-          looking to deepen your practice, Anna’s legacy and expertise are
-          available to guide you on your journey through our studio.
-        </p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
