@@ -18,5 +18,5 @@ class InstructorAdmin(admin.ModelAdmin):
 
 @admin.register(Pricelist, site=custom_admin_site)
 class PricelistAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ('category',)
     inlines = [PricelistItemInline]

@@ -11,10 +11,10 @@ class Instructor(models.Model):
 
 
 class Pricelist(models.Model):
-    name = models.CharField(max_length=200)
+    category = models.CharField(max_length=200)
 
     def __str__(self):
-        return f"{self.name} Pricelist"
+        return f"{self.category} Pricelist"
 
 
 class PricelistItem(models.Model):

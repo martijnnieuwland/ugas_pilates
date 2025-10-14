@@ -11,7 +11,7 @@
     <div class="row gx-5 gy-3">
       {% for list in pricelists %}
       <div id="solo" class="col col-12 col-lg-6">
-        <h6 class="display-6">{{ list.name }}</h6>
+        <h6 class="display-6">{{ list.category }}</h6>
         {% for item in list.items.all %}
         <table class="table">
           <tbody>
