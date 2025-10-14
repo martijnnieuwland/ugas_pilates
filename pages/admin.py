@@ -5,7 +5,7 @@ from .models import Instructor, Pricelist, PricelistItem
 
 class PricelistItemInline(admin.TabularInline):
     model = PricelistItem
-    extra = 0
+    extra = 1
     min_num = 0
     can_delete = True
 
