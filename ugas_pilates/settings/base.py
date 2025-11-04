@@ -2,7 +2,7 @@
 Base settings for Uga's Pilates project.
 """
 
-import os, sys
+import os
 from pathlib import Path
 from dotenv import load_dotenv
 
