@@ -2,7 +2,7 @@ import os
 
 from django.shortcuts import render
 
-from pages.models import Instructor, Pricelist
+from pages.models import Instructor, Pricelist, Studio
 
 
 def contact(request):
@@ -25,9 +25,11 @@ def faq(request):
 
 
 def home(request):
+    studio = Studio.objects.first()
     context = {
         "title": "Uga's Pilates - True Pilates",
-        "heading": "True to the core" "",
+        "heading": "True to the core",
+        "studio": studio,
     }
     return render(request, "pages/index.html", context)
 
@@ -72,10 +74,12 @@ def schedule(request):
 
 
 def studio(request):
+    studio = Studio.objects.first()
     context = {
         "title": "Uga's Pilates",
         "heading": "The Studio",
         "seo": "Following Romana Kryzanowska's true pilates method",
+        "studio": studio,
     }
     return render(request, "pages/studio.html", context)
 

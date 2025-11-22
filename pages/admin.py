@@ -1,6 +1,6 @@
 from django.contrib import admin
 from ugas_pilates.admin import custom_admin_site
-from .models import Instructor, Pricelist, PricelistItem
+from .models import Instructor, Pricelist, PricelistItem, Studio
 
 
 class PricelistItemInline(admin.TabularInline):
@@ -20,3 +20,9 @@ class InstructorAdmin(admin.ModelAdmin):
 class PricelistAdmin(admin.ModelAdmin):
     list_display = ('category',)
     inlines = [PricelistItemInline]
+
+
+@admin.register(Studio, site=custom_admin_site)
+class StudioAdmin(admin.ModelAdmin):
+    list_display = ('caption',)
+    search_fields = ('caption',)

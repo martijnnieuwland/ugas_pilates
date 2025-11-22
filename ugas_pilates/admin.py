@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.contrib.auth.models import Group, User
 from django.contrib.auth.admin import GroupAdmin, UserAdmin
 
+
 class CustomAdminSite(admin.AdminSite):
     site_header = "Uga’s Pilates Administration"
     site_title = "Uga’s Pilates"
@@ -14,7 +15,7 @@ class CustomAdminSite(admin.AdminSite):
         """
         app_order = ["pages", "blog"]
         model_order = {
-            "pages": ["Instructor", "Pricelist", "PricelistItem"],
+            "pages": ["Studio", "Instructor", "Pricelist", "PricelistItem"],
             "blog": ["Post"],
         }
 
@@ -22,18 +23,22 @@ class CustomAdminSite(admin.AdminSite):
 
         # Sort apps
         app_list.sort(
-            key=lambda app: app_order.index(app["app_label"])
-            if app["app_label"] in app_order
-            else 999
+            key=lambda app: (
+                app_order.index(app["app_label"])
+                if app["app_label"] in app_order
+                else 999
+            )
         )
 
         # Sort models within apps
         for app in app_list:
             if app["app_label"] in model_order:
                 app["models"].sort(
-                    key=lambda m: model_order[app["app_label"]].index(m["object_name"])
-                    if m["object_name"] in model_order[app["app_label"]]
-                    else 999
+                    key=lambda m: (
+                        model_order[app["app_label"]].index(m["object_name"])
+                        if m["object_name"] in model_order[app["app_label"]]
+                        else 999
+                    )
                 )
 
         return app_list

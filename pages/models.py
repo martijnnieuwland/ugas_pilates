@@ -27,3 +27,11 @@ class PricelistItem(models.Model):
 
     def __str__(self):
         return f"{self.name} - €{self.price}"
+
+
+class Studio(models.Model):
+    image = models.ImageField(upload_to='studio_images/')
+    caption = models.CharField(max_length=200, blank=True)
+
+    def __str__(self):
+        return self.caption if self.caption else "Studio"
