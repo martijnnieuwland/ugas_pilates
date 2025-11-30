@@ -1,16 +1,5 @@
 {% extends 'base.html' %}
-
 {% load static %}
-
-{% block title %}
-<title>{{ title }} | {{ heading }}</title>
-<link
-  rel="icon"
-  type="image/svg+xml"
-  href="{% static 'images/logo-primary-altlight-outline.svg' %}"
-/>
-{% endblock %}
-
 {% block landing %}
 <!-- LANDING -->
 <div id="landing">
@@ -19,11 +8,8 @@
   </div>
 </div>
 {% endblock landing %}
-
 {% block nav_id %}home-nav{% endblock nav_id %}
-
 {% block toggler_theme %}light{% endblock toggler_theme %}
-
 {% block content %}
 <!-- Text on top of background image -->
 <div class="container vh-100 position-relative">
@@ -90,6 +76,4 @@
 <section id="contact"></section>
 
 {% endblock content %}
-
-{% block toggler_script %}
-{% endblock toggler_script %}
+{% block toggler_script %} {% endblock toggler_script %}
