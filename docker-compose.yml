@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: ugas-pilates-db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=ugas_pilates_db
+      - POSTGRES_USER=ugas_pilates_user
+      - POSTGRES_PASSWORD=ugas_pilates_password
+      - DB_HOST=db
+    ports:
+      - '5432:5432'
+
+  web:
+    build: .
+    container_name: ugas-pilates-web
+
+    command: >
+      sh -c "python manage.py migrate &&
+             gunicorn ugas_pilates.wsgi:application --bind 0.0.0.0:8000"
+
+    volumes:
+      - .:/app
+    environment:
+      - DB_NAME=postgres://ugas_pilates_user:ugas_pilates_password@db:5432/ugas_pilates_db
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

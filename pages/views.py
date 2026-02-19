@@ -35,12 +35,12 @@ def home(request):
 
 
 def instructor(request):
-    instructors = Instructor.objects.all()
+    instructor = Instructor.objects.first()
     context = {
         "title": "Instructors",
         "heading": "Meet Your Instructor",
         "seo": "Dedicated to your wellbeing",
-        "instructors": instructors,
+        "instructor": instructor,
     }
     return render(request, "pages/instructors.html", context)
 

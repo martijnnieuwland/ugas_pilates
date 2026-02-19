@@ -1,0 +1,11 @@
+**/__pycache__
+**/*.pyc
+
+.git
+.gitignore
+.idea
+.vscode
+.env*
+
+# Ignore local static files to ensure a clean collectstatic in the image
+staticfiles/

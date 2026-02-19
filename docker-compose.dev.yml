@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: ugas-pilates-db
+    environment:
+      POSTGRES_DB: ugasdb_dev
+      POSTGRES_USER: mn
+      POSTGRES_PASSWORD: mn
+    ports:
+      - "5432:5432"   # Only works if no other process is using 5432 in WSL
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    container_name: ugas-pilates-web
+    entrypoint: ""   # clear Dockerfile entrypoint
+    command: >
+      bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+      - staticfiles_data:/app/staticfiles
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://mn:mn@db:5432/ugasdb_dev
+
+volumes:
+  postgres_data:
+  staticfiles_data:

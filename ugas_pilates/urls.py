@@ -53,7 +53,6 @@ urlpatterns = [
 # Conditionally add static and debug_toolbar URL patterns for development
 if settings.DEBUG:
     # Serve static/media in dev
-
     urlpatterns = staticfiles_urlpatterns() + urlpatterns
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

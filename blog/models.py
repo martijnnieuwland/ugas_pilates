@@ -8,7 +8,7 @@ class Post(models.Model):
         null=True,
         blank=True,
         upload_to="blog_images/",
-        default="blog_images/logo-tertiary-altdark.jpg",
+        default="blog_images/logo.svg",
     )
     title = models.CharField(max_length=140)
     lead = models.TextField()

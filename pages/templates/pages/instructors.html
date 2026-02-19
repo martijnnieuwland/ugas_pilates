@@ -11,7 +11,6 @@
 
   <div class="container-md">
     <div class="row mb-5">
-      {% for instructor in instructors %}
       <div class="clearfix">
         <hr />
         <h3 class="display-4 text-center">{{ instructor.name }}</h3>
@@ -23,7 +22,6 @@
         />
         <p class="">{{ instructor.bio|linebreaksbr }}</p>
       </div>
-      {% endfor %}
     </div>
   </div>
 </div>

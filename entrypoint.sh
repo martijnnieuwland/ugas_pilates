@@ -1,17 +1,17 @@
 #!/bin/sh
+
+# Exit immediately if a command exits with a non-zero status.
+#!/bin/sh
 set -e
 
-# Optionally wait for Postgres (if SQL_HOST/SQL_PORT are provided)
-if [ -n "$SQL_HOST" ] && [ -n "$SQL_PORT" ]; then
-  echo "Waiting for $SQL_HOST:$SQL_PORT..."
-  while ! nc -z "$SQL_HOST" "$SQL_PORT"; do
-    sleep 1
-  done
-fi
+# Wait for database if needed
+# ./wait-for-it.sh $DB_HOST:$DB_PORT -t 30
 
-# Run migrations and collect static files
+# Run migrations
 python manage.py migrate --noinput
-python manage.py collectstatic --noinput
 
-# Execute the container command (e.g. gunicorn)
-exec "$@"
+# Start Gunicorn on the port Cloud Run provides
+exec /opt/venv/bin/gunicorn ugas_pilates.wsgi:application \
+    --bind 0.0.0.0:${PORT:-8080} \
+    --workers 2 \
+    --worker-tmp-dir /dev/shm
